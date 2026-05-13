@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zypper.fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 12:49+0100\n"
+"POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2025-08-04 14:59+0000\n"
 "Last-Translator: Sophie Leroy <sophie@stoquart.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/zypper/master/fr/"
@@ -1817,11 +1817,11 @@ msgstr ""
 msgid "Received %1% new package signing key from repository \"%2%\":"
 msgid_plural "Received %1% new package signing keys from repository \"%2%\":"
 msgstr[0] ""
-"Réception de %1% nouvelle clé de signature de paquets provenant du dépôt "
-"« %2% » :"
+"Réception de %1% nouvelle clé de signature de paquets provenant du dépôt « "
+"%2% » :"
 msgstr[1] ""
-"Réception de %1% nouvelles clés de signature de paquets provenant du dépôt "
-"« %2% » :"
+"Réception de %1% nouvelles clés de signature de paquets provenant du dépôt « "
+"%2% » :"
 
 #: src/callbacks/keyring.h:472
 msgid ""
@@ -2679,6 +2679,23 @@ msgstr ""
 "Liste tous les paquets pour lesquels des version plus récente sont "
 "disponibles, indépendamment de savoir si elles sont ou non installables."
 
+#: src/commands/listupdates.cc:48 src/commands/solveroptionset.cc:24
+#, boost-format
+msgid "Valid values: %1%"
+msgstr "Valeurs valides : %1%"
+
+#: src/commands/listupdates.cc:50
+msgid "LEVEL"
+msgstr ""
+
+#. translators: --filter-version-change
+#: src/commands/listupdates.cc:53
+msgid ""
+"Filter updates by version change significance. LEVEL: 'none' (default, show "
+"all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
+"changes, i.e. same upstream version)."
+msgstr ""
+
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
 msgid "addlocale (aloc) [OPTIONS] <LOCALE> ..."
@@ -2874,7 +2891,7 @@ msgstr[1] "%lu verrouillages supprimés."
 #: src/commands/repos/list.cc:236 src/commands/services/list.cc:91
 #: src/commands/services/list.cc:161 src/info.cc:92 src/info.cc:718
 #: src/info.cc:937 src/locales.cc:201 src/search.cc:48 src/search.cc:199
-#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:789
+#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:819
 #: src/utils/misc.cc:324
 msgid "Name"
 msgstr "Nom"
@@ -2895,7 +2912,7 @@ msgstr "Type"
 #. translators: property name; short; used like "Name: value"
 #. translators: package's repository (header)
 #: src/commands/locks/list.cc:136 src/info.cc:90 src/search.cc:56
-#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:786
+#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:816
 #: src/utils/misc.cc:323
 msgid "Repository"
 msgstr "Dépôt"
@@ -3760,7 +3777,7 @@ msgstr "Alias"
 #. translator: Option argument like '--export <FILE.repo>'. Do do not translate lowercase wordparts
 #: src/commands/repos/list.cc:51 src/commands/repos/list.cc:54
 #: src/commands/repos/list.cc:292 src/commands/services/add.cc:96
-#: src/commands/services/list.cc:172 src/repos.cc:1242
+#: src/commands/services/list.cc:172 src/repos.cc:1254
 #: src/utils/flags/zyppflags.h:49
 msgid "URI"
 msgstr "URI"
@@ -3769,27 +3786,27 @@ msgstr "URI"
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:58 src/commands/repos/list.cc:244
 #: src/commands/services/add.cc:98 src/commands/services/list.cc:92
-#: src/commands/services/list.cc:162 src/repos.cc:1244
+#: src/commands/services/list.cc:162 src/repos.cc:1256
 msgid "Enabled"
 msgstr "Activé"
 
 #. GPG Check
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:59 src/commands/repos/list.cc:248
-#: src/commands/services/list.cc:163 src/repos.cc:1246
+#: src/commands/services/list.cc:163 src/repos.cc:1258
 msgid "GPG Check"
 msgstr "Vérification GPG"
 
 #. translators: repository priority (in zypper repos -p or -d)
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:60 src/commands/repos/list.cc:276
-#: src/commands/services/list.cc:169 src/repos.cc:1250
+#: src/commands/services/list.cc:169 src/repos.cc:1262
 msgid "Priority"
 msgstr "Priorité"
 
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:61 src/commands/services/add.cc:100
-#: src/commands/services/list.cc:93 src/repos.cc:1248
+#: src/commands/services/list.cc:93 src/repos.cc:1260
 msgid "Autorefresh"
 msgstr "Rafraichissement automatique"
 
@@ -3844,7 +3861,7 @@ msgstr "Lister tous les dépôts définis."
 msgid "Export all defined repositories as a single local .repo file."
 msgstr "Exporter tous les dépôts définis dans un fichier .repo local unique."
 
-#: src/commands/repos/list.cc:129 src/repos.cc:999
+#: src/commands/repos/list.cc:129 src/repos.cc:1011
 msgid "Error reading repositories:"
 msgstr "Erreur lors de la lecture des dépôts :"
 
@@ -3995,7 +4012,7 @@ msgstr "L'option globale '%s' n'a aucun effet ici."
 msgid "Arguments are not allowed if '%s' is used."
 msgstr "Les arguments ne sont pas autorisés si '%s' est utilisé."
 
-#: src/commands/repos/refresh.cc:241 src/repos.cc:1011
+#: src/commands/repos/refresh.cc:241 src/repos.cc:1023
 msgid "Specified repositories: "
 msgstr "Dépôts spécifiés : "
 
@@ -4004,7 +4021,7 @@ msgstr "Dépôts spécifiés : "
 msgid "Refreshing repository '%s'."
 msgstr "Rafraîchissement du dépôt '%s'."
 
-#: src/commands/repos/refresh.cc:282 src/repos.cc:836
+#: src/commands/repos/refresh.cc:282 src/repos.cc:848
 #, c-format, boost-format
 msgid "Scanning content of disabled repository '%s'."
 msgstr "Analyse du contenu du dépôt désactivé '%s'."
@@ -4014,7 +4031,7 @@ msgstr "Analyse du contenu du dépôt désactivé '%s'."
 msgid "Skipping disabled repository '%s'"
 msgstr "Dépôt désactivé '%s' ignoré"
 
-#: src/commands/repos/refresh.cc:308 src/repos.cc:854 src/repos.cc:901
+#: src/commands/repos/refresh.cc:308 src/repos.cc:866 src/repos.cc:913
 #, c-format, boost-format
 msgid "Skipping repository '%s' because of the above error."
 msgstr "Dépôt '%s' ignoré en raison de l'erreur susmentionnée."
@@ -4042,7 +4059,7 @@ msgstr ""
 msgid "Could not refresh the repositories because of errors."
 msgstr "Impossible de rafraichir les dépôts à cause d'erreurs."
 
-#: src/commands/repos/refresh.cc:344 src/repos.cc:930
+#: src/commands/repos/refresh.cc:344 src/repos.cc:942
 msgid "Some of the repositories have not been refreshed because of an error."
 msgstr "Plusieurs dépôts n'ont pas été rafraichis à cause d'une erreur."
 
@@ -4098,12 +4115,12 @@ msgstr ""
 msgid "Repository '%s' renamed to '%s'."
 msgstr "Le dépôt '%s' a été renommé en '%s'."
 
-#: src/commands/repos/rename.cc:47 src/repos.cc:1190
+#: src/commands/repos/rename.cc:47 src/repos.cc:1202
 #, c-format, boost-format
 msgid "Repository named '%s' already exists. Please use another alias."
 msgstr "Un dépôt nommé '%s' existe déjà. Veuillez utiliser un autre alias."
 
-#: src/commands/repos/rename.cc:52 src/repos.cc:1668
+#: src/commands/repos/rename.cc:52 src/repos.cc:1680
 msgid "Error while modifying the repository:"
 msgstr "Erreur lors de la modification du dépôt :"
 
@@ -4573,7 +4590,7 @@ msgstr ""
 "Comme --details, mais avec des informations supplémentaires lorsque la "
 "recherche correspond (utile pour la recherche dans les dépendances)."
 
-#: src/commands/search/search.cc:298 src/repos.cc:773
+#: src/commands/search/search.cc:298 src/repos.cc:785
 #, c-format, boost-format
 msgid "Specified repository '%s' is disabled."
 msgstr "Le dépôt '%s' spécifié est désactivé."
@@ -4593,7 +4610,7 @@ msgstr ""
 msgid "See the above message for a hint."
 msgstr "Voir le message ci-dessus pour une indication."
 
-#: src/commands/search/search.cc:505 src/repos.cc:978
+#: src/commands/search/search.cc:505 src/repos.cc:990
 msgid "Running 'zypper refresh' as root might resolve the problem."
 msgstr "Lancer 'zypper refresh' en tant que root peut résoudre le problème."
 
@@ -4701,7 +4718,7 @@ msgstr ""
 "Problème de récupération du fichier d'index du dépôt pour le service '%s' :"
 
 #: src/commands/services/common.cc:195 src/commands/services/refresh.cc:159
-#: src/repos.cc:1720
+#: src/repos.cc:1730
 #, c-format, boost-format
 msgid "Skipping service '%s' because of the above error."
 msgstr "Service '%s' ignoré à cause de l'erreur susmentionnée."
@@ -4997,11 +5014,6 @@ msgstr "Quitte le shell zypper courant."
 #: src/commands/shell.cc:74
 msgid "This command only makes sense in the zypper shell."
 msgstr "Cette commande n'a de sens que dans le shell zypper."
-
-#: src/commands/solveroptionset.cc:24
-#, boost-format
-msgid "Valid values: %1%"
-msgstr "Valeurs valides : %1%"
 
 #: src/commands/solveroptionset.cc:36 src/commands/solveroptionset.cc:59
 msgid "Solver options"
@@ -5702,7 +5714,7 @@ msgstr "Version"
 #. translators: property name; short; used like "Name: value"
 #. translators: package architecture (header)
 #: src/info.cc:96 src/search.cc:54 src/search.cc:460 src/search.cc:510
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Arch"
 msgstr "Architecture"
 
@@ -5802,7 +5814,7 @@ msgstr "URL en amont"
 #. translators: property name; short; used like "Name: value"
 #. translator: Table column header.
 #. Name
-#: src/info.cc:501 src/update.cc:406 src/utils/misc.cc:325
+#: src/info.cc:501 src/update.cc:429 src/utils/misc.cc:325
 #: src/utils/misc.cc:367
 msgid "Category"
 msgstr "Catégorie"
@@ -5863,7 +5875,7 @@ msgstr "(vide)"
 #. TranslatorExplanation S stands for Status
 #: src/info.cc:717 src/info.cc:936 src/locales.cc:199 src/search.cc:46
 #: src/search.cc:198 src/search.cc:303 src/search.cc:456 src/search.cc:503
-#: src/update.cc:784
+#: src/update.cc:814
 msgid "S"
 msgstr "S"
 
@@ -6196,7 +6208,7 @@ msgstr "Erreur lors de la désactivation du dépôt '%s'."
 msgid "Problem retrieving files from '%s'."
 msgstr "Problème de récupération de fichiers depuis '%s'."
 
-#: src/repos.cc:341 src/repos.cc:1859 src/solve-commit.cc:990
+#: src/repos.cc:341 src/repos.cc:1869 src/solve-commit.cc:990
 #: src/solve-commit.cc:1022 src/solve-commit.cc:1046
 msgid "Please see the above error message for a hint."
 msgstr "Veuillez consulter le message d'erreur ci-dessus pour une indication."
@@ -6273,33 +6285,33 @@ msgid "Error building the cache:"
 msgstr "Erreur lors de la reconstruction du cache :"
 
 # TLABEL linuxrc_2002_03_29_0036__117
-#: src/repos.cc:673
+#: src/repos.cc:685
 #, c-format, boost-format
 msgid "Repository '%s' not found by its alias, number, or URI."
 msgstr ""
 "Le dépôt '%s' n'a pas été trouvé en fonction de son alias, numéro ou URI."
 
-#: src/repos.cc:675
+#: src/repos.cc:687
 #, c-format, boost-format
 msgid "Use '%s' to get the list of defined repositories."
 msgstr "Utilisez '%s' pour obtenir la liste des dépôts définis."
 
-#: src/repos.cc:695
+#: src/repos.cc:707
 #, c-format, boost-format
 msgid "Ignoring disabled repository '%s'"
 msgstr "Dépôt désactivé '%s' ignoré"
 
-#: src/repos.cc:779
+#: src/repos.cc:791
 #, c-format, boost-format
 msgid "Global option '%s' can be used to temporarily enable repositories."
 msgstr "L'option globale '%s' permet d'activer temporairement des dépôts."
 
-#: src/repos.cc:795 src/repos.cc:801
+#: src/repos.cc:807 src/repos.cc:813
 #, c-format, boost-format
 msgid "Ignoring repository '%s' because of '%s' option."
 msgstr "Ignore le dépôt '%s' à cause de l'option '%s'."
 
-#: src/repos.cc:822 src/repos.cc:915
+#: src/repos.cc:834 src/repos.cc:927
 #, c-format, boost-format
 msgid "Temporarily enabling repository '%s'."
 msgstr "Activation temporaire du dépôt '%s'."
@@ -6307,7 +6319,7 @@ msgstr "Activation temporaire du dépôt '%s'."
 #. bsc#1235636: Asks to suppress reporting the Exception (usually: No permission to
 #. write repository cache), because it scares. This was was indeed the legacy behavior:
 #. SUPPRESS: zypper.out().error( ex, "Problem" );
-#: src/repos.cc:879
+#: src/repos.cc:891
 #, c-format, boost-format
 msgid ""
 "Repository '%s' is out-of-date. You can run 'zypper refresh' as root to "
@@ -6316,7 +6328,7 @@ msgstr ""
 "Le dépôt '%s' n'est pas à jour. Vous pouvez lancer 'zypper refresh' en tant "
 "que root pour le mettre à jour."
 
-#: src/repos.cc:896
+#: src/repos.cc:908
 #, c-format, boost-format
 msgid ""
 "The metadata cache needs to be built for the '%s' repository. You can run "
@@ -6325,83 +6337,83 @@ msgstr ""
 "Le cache de métadonnées a besoin d'être construit pour le dépôt '%s'. Vous "
 "pouvez lancer 'zypper refresh' en tant que root pour le faire."
 
-#: src/repos.cc:922
+#: src/repos.cc:934
 #, c-format, boost-format
 msgid "Repository '%s' stays disabled."
 msgstr "Le dépôt '%s' reste désactivé."
 
-#: src/repos.cc:969
+#: src/repos.cc:981
 msgid "Initializing Target"
 msgstr "Initialisation de la cible"
 
-#: src/repos.cc:977
+#: src/repos.cc:989
 msgid "Target initialization failed:"
 msgstr "Échec de l'initialisation de la cible :"
 
-#: src/repos.cc:1059
+#: src/repos.cc:1071
 #, c-format, boost-format
 msgid "Cleaning metadata cache for '%s'."
 msgstr "Nettoyage du cache des métadonnées pour '%s'."
 
-#: src/repos.cc:1067
+#: src/repos.cc:1079
 #, c-format, boost-format
 msgid "Cleaning raw metadata cache for '%s'."
 msgstr "Nettoyage du cache des métadonnées brutes pour '%s'."
 
-#: src/repos.cc:1073
+#: src/repos.cc:1085
 #, c-format, boost-format
 msgid "Keeping raw metadata cache for %s '%s'."
 msgstr "Conservation du cache des métadonnées brutes pour %s '%s'."
 
 # TLABEL restore_2002_08_07_0216__60
 #. translators: meaning the cached rpm files
-#: src/repos.cc:1080
+#: src/repos.cc:1092
 #, c-format, boost-format
 msgid "Cleaning packages for '%s'."
 msgstr "Nettoyage des paquets pour '%s'."
 
-#: src/repos.cc:1088
+#: src/repos.cc:1100
 #, c-format, boost-format
 msgid "Cannot clean repository '%s' because of an error."
 msgstr "Impossible de nettoyer le dépôt '%s' à cause d'une erreur."
 
-#: src/repos.cc:1099
+#: src/repos.cc:1111
 msgid "Cleaning installed packages cache."
 msgstr "Nettoyage du cache des paquets installés."
 
-#: src/repos.cc:1108
+#: src/repos.cc:1120
 msgid "Cannot clean installed packages cache because of an error."
 msgstr ""
 "Impossible de nettoyer le cache des paquets installés à cause d'une erreur."
 
-#: src/repos.cc:1126
+#: src/repos.cc:1138
 msgid "Could not clean the repositories because of errors."
 msgstr "Impossible de nettoyer les dépôts à cause d'erreurs."
 
-#: src/repos.cc:1132
+#: src/repos.cc:1144
 msgid "Some of the repositories have not been cleaned up because of an error."
 msgstr "Certains dépôts n'ont pas été nettoyés à cause d'une erreur."
 
-#: src/repos.cc:1137
+#: src/repos.cc:1149
 msgid "Specified repositories have been cleaned up."
 msgstr "Les dépôts spécifiés ont été nettoyés."
 
-#: src/repos.cc:1139
+#: src/repos.cc:1151
 msgid "All repositories have been cleaned up."
 msgstr "Tous les dépôts ont été nettoyés."
 
-#: src/repos.cc:1161
+#: src/repos.cc:1173
 msgid "This is a changeable read-only media (CD/DVD), disabling autorefresh."
 msgstr ""
 "Ceci est un support amovible en lecture seule (CD/DVD), désactivation du "
 "rafraîchissement automatique."
 
-#: src/repos.cc:1182
+#: src/repos.cc:1194
 #, c-format, boost-format
 msgid "Invalid repository alias: '%s'"
 msgstr "Alias de dépôt invalide : '%s'"
 
-#: src/repos.cc:1199
+#: src/repos.cc:1211
 msgid ""
 "Could not determine the type of the repository. Please check if the defined "
 "URIs (see below) point to a valid repository:"
@@ -6409,26 +6421,26 @@ msgstr ""
 "Impossible de déterminer le type de dépôt. Veuillez vérifier si les URI "
 "définis (voir ci-après) pointent vers un dépôt valide :"
 
-#: src/repos.cc:1205
+#: src/repos.cc:1217
 msgid "Can't find a valid repository at given location:"
 msgstr "Impossible de trouver un dépôt valide à l'endroit indiqué :"
 
-#: src/repos.cc:1213
+#: src/repos.cc:1225
 msgid "Problem transferring repository data from specified URI:"
 msgstr ""
 "Problème lors du transfert des données du dépôt depuis l'URI spécifié :"
 
-#: src/repos.cc:1214
+#: src/repos.cc:1226
 msgid "Please check whether the specified URI is accessible."
 msgstr "Veuillez vérifier si l'URI spécifié est accessible."
 
-#: src/repos.cc:1221
+#: src/repos.cc:1233
 msgid "Unknown problem when adding repository:"
 msgstr "Problème inconnu lors de l'ajout du dépôt :"
 
 #. translators: BOOST STYLE POSITIONAL DIRECTIVES ( %N% )
 #. translators: %1% - a repository name
-#: src/repos.cc:1231
+#: src/repos.cc:1243
 #, boost-format
 msgid ""
 "GPG checking is disabled in configuration of repository '%1%'. Integrity and "
@@ -6437,12 +6449,12 @@ msgstr ""
 "La vérification GPG est désactivée dans la configuration du dépôt '%1%'. "
 "L'intégrité et l'origine des paquets ne peuvent pas être assurées."
 
-#: src/repos.cc:1236
+#: src/repos.cc:1248
 #, c-format, boost-format
 msgid "Repository '%s' successfully added"
 msgstr "Le dépôt '%s' a été ajouté avec succès"
 
-#: src/repos.cc:1262
+#: src/repos.cc:1274
 #, c-format, boost-format
 msgid "Reading data from '%s' media is delayed until next refresh."
 msgstr ""
@@ -6450,128 +6462,128 @@ msgstr ""
 "rafraîchissement."
 
 # TLABEL restore_2002_08_07_0216__60
-#: src/repos.cc:1267
+#: src/repos.cc:1279
 #, c-format, boost-format
 msgid "Reading data from '%s' media"
 msgstr "Lecture des données depuis le support '%s'"
 
 # TLABEL restore_2002_08_07_0216__60
-#: src/repos.cc:1273
+#: src/repos.cc:1285
 #, c-format, boost-format
 msgid "Problem reading data from '%s' media"
 msgstr "Problème de lecture des données depuis le support %s"
 
-#: src/repos.cc:1274
+#: src/repos.cc:1286
 msgid "Please check if your installation media is valid and readable."
 msgstr ""
 "Vérifiez si votre support d'installation est valide et accessible en lecture."
 
-#: src/repos.cc:1345
+#: src/repos.cc:1357
 msgid "Problem accessing the file at the specified URI"
 msgstr "Problème d'accès au fichier à l'URI spécifié"
 
-#: src/repos.cc:1346
+#: src/repos.cc:1358
 msgid "Please check if the URI is valid and accessible."
 msgstr "Veuillez vérifier que l'URI est valide et accessible."
 
-#: src/repos.cc:1353
+#: src/repos.cc:1365
 msgid "Problem parsing the file at the specified URI"
 msgstr "Problème d'analyse du fichier à l'URI spécifié"
 
 #. TranslatorExplanation Don't translate the '.repo' string.
-#: src/repos.cc:1355
+#: src/repos.cc:1367
 msgid "Is it a .repo file?"
 msgstr "Est-ce un fichier .repo ?"
 
-#: src/repos.cc:1362
+#: src/repos.cc:1374
 msgid "Problem encountered while trying to read the file at the specified URI"
 msgstr "Problème rencontré à la lecture du fichier à l'URI spécifié"
 
-#: src/repos.cc:1375
+#: src/repos.cc:1387
 msgid "Repository with no alias defined found in the file, skipping."
 msgstr "Un dépôt sans alias défini a été trouvé dans le fichier, ignoré."
 
 # TLABEL linuxrc_2002_03_29_0036__117
-#: src/repos.cc:1381
+#: src/repos.cc:1393
 #, c-format, boost-format
 msgid "Repository '%s' has no URI defined, skipping."
 msgstr "Le dépôt '%s' n'a pas d'URI défini. Il va être ignoré."
 
-#: src/repos.cc:1429
+#: src/repos.cc:1441
 #, c-format, boost-format
 msgid "Repository '%s' has been removed."
 msgstr "Le dépôt '%s' a été supprimé."
 
-#: src/repos.cc:1577
+#: src/repos.cc:1589
 #, c-format, boost-format
 msgid "Repository '%s' priority has been left unchanged (%d)"
 msgstr "La priorité du dépôt '%s' a été laissée inchangée (%d)"
 
-#: src/repos.cc:1610
+#: src/repos.cc:1622
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully enabled."
 msgstr "Le dépôt '%s' a été activé avec succès."
 
-#: src/repos.cc:1612
+#: src/repos.cc:1624
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully disabled."
 msgstr "Le dépôt '%s' a été désactivé avec succès."
 
-#: src/repos.cc:1619
+#: src/repos.cc:1631
 #, c-format, boost-format
 msgid "Autorefresh has been enabled for repository '%s'."
 msgstr "Le rafraichissement automatique a été activé pour le dépôt '%s'."
 
-#: src/repos.cc:1621
+#: src/repos.cc:1633
 #, c-format, boost-format
 msgid "Autorefresh has been disabled for repository '%s'."
 msgstr "Le rafraichissement automatique a été désactivé pour le dépôt '%s'."
 
-#: src/repos.cc:1628
+#: src/repos.cc:1640
 #, c-format, boost-format
 msgid "RPM files caching has been enabled for repository '%s'."
 msgstr "La mise en cache des fichiers RPM a été activée pour le dépôt '%s'."
 
-#: src/repos.cc:1630
+#: src/repos.cc:1642
 #, c-format, boost-format
 msgid "RPM files caching has been disabled for repository '%s'."
 msgstr "La mise en cache des fichiers RPM a été désactivée pour le dépôt '%s'."
 
-#: src/repos.cc:1637
+#: src/repos.cc:1649
 #, c-format, boost-format
 msgid "GPG check has been enabled for repository '%s'."
 msgstr "La vérification GPG a été activée pour le dépôt '%s'."
 
-#: src/repos.cc:1639
+#: src/repos.cc:1651
 #, c-format, boost-format
 msgid "GPG check has been disabled for repository '%s'."
 msgstr "La vérification GPG a été désactivée pour le dépôt '%s'."
 
-#: src/repos.cc:1645
+#: src/repos.cc:1657
 #, c-format, boost-format
 msgid "Repository '%s' priority has been set to %d."
 msgstr "La priorité du dépôt '%s' a été réglée à %d."
 
-#: src/repos.cc:1651
+#: src/repos.cc:1663
 #, c-format, boost-format
 msgid "Name of repository '%s' has been set to '%s'."
 msgstr "Le nom du dépôt '%s' a été défini à '%s'."
 
-#: src/repos.cc:1662
+#: src/repos.cc:1674
 #, c-format, boost-format
 msgid "Nothing to change for repository '%s'."
 msgstr "Rien à changer pour le dépôt '%s'."
 
-#: src/repos.cc:1669
+#: src/repos.cc:1681
 #, c-format, boost-format
 msgid "Leaving repository %s unchanged."
 msgstr "Le dépôt %s est laissé inchangé."
 
-#: src/repos.cc:1756
+#: src/repos.cc:1766
 msgid "Loading repository data..."
 msgstr "Chargement des données du dépôt..."
 
-#: src/repos.cc:1758
+#: src/repos.cc:1768
 msgid ""
 "No repositories defined. Operating only with the installed resolvables. "
 "Nothing can be installed."
@@ -6579,46 +6591,46 @@ msgstr ""
 "Pas de dépôt défini. Ne fonctionne qu'avec les résolvables installés. Rien "
 "ne peut être installé."
 
-#: src/repos.cc:1781
+#: src/repos.cc:1791
 #, c-format, boost-format
 msgid "Retrieving repository '%s' data..."
 msgstr "Récupération de données du dépôt '%s'..."
 
-#: src/repos.cc:1789
+#: src/repos.cc:1799
 #, c-format, boost-format
 msgid "Repository '%s' not cached. Caching..."
 msgstr "Le dépôt '%s' n'a pas été mis en cache. Mise en cache..."
 
 # TLABEL restore_2002_08_07_0216__60
-#: src/repos.cc:1795 src/repos.cc:1829
+#: src/repos.cc:1805 src/repos.cc:1839
 #, c-format, boost-format
 msgid "Problem loading data from '%s'"
 msgstr "Problème lors du chargement des données depuis '%s'"
 
 # TLABEL linuxrc_2002_03_29_0036__117
-#: src/repos.cc:1799
+#: src/repos.cc:1809
 #, c-format, boost-format
 msgid "Repository '%s' could not be refreshed. Using old cache."
 msgstr ""
 "Le dépôt '%s' n'a pas pu être rafraichi. Utilisation de l'ancien cache."
 
-#: src/repos.cc:1803 src/repos.cc:1832
+#: src/repos.cc:1813 src/repos.cc:1842
 #, c-format, boost-format
 msgid "Resolvables from '%s' not loaded because of error."
 msgstr "Les éléments de '%s' n'ont pas pu être chargés en raison d'une erreur."
 
-#: src/repos.cc:1819
+#: src/repos.cc:1829
 #, boost-format
 msgid "Repository '%1%' metadata expired since %2%."
 msgstr "Les métadonnées du dépôt '%1%' sont expirées depuis le %2%."
 
 #. translators: the first %s is 'zypper refresh' and the second 'zypper clean -m'
-#: src/repos.cc:1831
+#: src/repos.cc:1841
 #, c-format, boost-format
 msgid "Try '%s', or even '%s' before doing so."
 msgstr "Essayez '%s', ou même '%s' avant de faire ceci."
 
-#: src/repos.cc:1836
+#: src/repos.cc:1846
 msgid ""
 "Repository metadata expired: Check if 'autorefresh' is turned on (zypper "
 "lr), otherwise manually refresh the repository (zypper ref). If this does "
@@ -6630,32 +6642,32 @@ msgstr ""
 "ref). Si cela ne résout pas le problème, il se peut que vous utilisez un "
 "miroir interrompu ou que le serveur a cessé de prendre en charge le dépôt."
 
-#: src/repos.cc:1849
+#: src/repos.cc:1859
 msgid "Reading installed packages..."
 msgstr "Lecture des paquets installés..."
 
-#: src/repos.cc:1858
+#: src/repos.cc:1868
 msgid "Problem occurred while reading the installed packages:"
 msgstr "Un problème est survenu lors de la lecture des paquets installés :"
 
-#: src/repos.cc:1875
+#: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
 msgstr ""
 
-#: src/repos.cc:1884
+#: src/repos.cc:1894
 #, c-format, boost-format
 msgid "Problem with the RPM file specified as '%s', skipping."
 msgstr "Problème avec le fichier RPM spécifié '%s'. Il va être ignoré."
 
-#: src/repos.cc:1906
+#: src/repos.cc:1916
 #, c-format, boost-format
 msgid "Problem reading the RPM header of %s. Is it an RPM file?"
 msgstr ""
 "Problème lors de la lecture de l'en-tête RPM de %s. Est-ce bien un fichier "
 "RPM ?"
 
-#: src/repos.cc:1926
+#: src/repos.cc:1936
 msgid "Plain RPM files cache"
 msgstr "Cache local des fichiers RPM"
 
@@ -6833,8 +6845,8 @@ msgstr ""
 #: src/solve-commit.cc:620
 #, c-format, boost-format
 msgid ""
-"Check for running processes using deleted libraries is disabled in "
-"zypper.conf. Run '%s' to check manually."
+"Check for running processes using deleted libraries is disabled in zypper."
+"conf. Run '%s' to check manually."
 msgstr ""
 "La recherche des processus en cours d'exécution qui utilisent des "
 "bibliothèques supprimées est désactivée dans le fichier zypper.conf. "
@@ -7036,7 +7048,7 @@ msgid "Dependencies of all installed packages are satisfied."
 msgstr "Les dépendances de tous les paquets installés sont satisfaites."
 
 #. translator: stats table header (plural number is %2%)
-#: src/update.cc:336
+#: src/update.cc:359
 #, boost-format
 msgid "Considering %1% out of %2% applicable patches:"
 msgid_plural "Considering %1% out of %2% applicable patches:"
@@ -7044,7 +7056,7 @@ msgstr[0] "Prise en compte de %1% correctif applicable sur %2% :"
 msgstr[1] "Prise en compte de %1% correctifs applicables sur %2% :"
 
 #. translator: stats table header
-#: src/update.cc:340
+#: src/update.cc:363
 #, boost-format
 msgid "Found %1% applicable patch:"
 msgid_plural "Found %1% applicable patches:"
@@ -7052,7 +7064,7 @@ msgstr[0] "%1% correctif applicable trouvé :"
 msgstr[1] "%1% correctifs applicables trouvés :"
 
 #. translator: stats summary
-#: src/update.cc:350
+#: src/update.cc:373
 #, c-format, boost-format
 msgid "%d patch locked"
 msgid_plural "%d patches locked"
@@ -7060,7 +7072,7 @@ msgstr[0] "%d correctif verrouillé"
 msgstr[1] "%d correctifs verrouillés"
 
 #. translator: stats summary
-#: src/update.cc:358
+#: src/update.cc:381
 #, c-format, boost-format
 msgid "%d patch optional"
 msgid_plural "%d patches optional"
@@ -7069,13 +7081,13 @@ msgstr[1] "%d correctifs optionnels"
 
 #. translator: Hint displayed right adjusted; %1% is a CLI option
 #. "42 patches optional                  (use --with-optional to include optional patches)"
-#: src/update.cc:362
+#: src/update.cc:385
 #, boost-format
 msgid "use '%1%' to include optional patches"
 msgstr "utilisez '%1%' pour inclure les correctifs optionnels"
 
 #. translator: stats summary
-#: src/update.cc:371
+#: src/update.cc:394
 #, c-format, boost-format
 msgid "%d patch needed"
 msgid_plural "%d patches needed"
@@ -7083,7 +7095,7 @@ msgstr[0] "%d correctif nécessaire"
 msgstr[1] "%d correctifs nécessaires"
 
 #. translator: stats summary
-#: src/update.cc:374
+#: src/update.cc:397
 #, c-format, boost-format
 msgid "%d security patch"
 msgid_plural "%d security patches"
@@ -7091,17 +7103,17 @@ msgstr[0] "%d mise à jour de sécurité"
 msgstr[1] "%d mises à jour de sécurité"
 
 #. translator: Table column header.
-#: src/update.cc:408
+#: src/update.cc:431
 msgid "Updatestack"
 msgstr "Pile de mise à jour"
 
 #. translator: Table column header.
-#: src/update.cc:410 src/update.cc:702
+#: src/update.cc:433 src/update.cc:732
 msgid "Patches"
 msgstr "Correctifs"
 
 #. translator: Table column header.
-#: src/update.cc:412
+#: src/update.cc:435
 msgid "Locked"
 msgstr "Verrouillé"
 
@@ -7110,73 +7122,73 @@ msgstr "Verrouillé"
 #. Category    | Updatestack | Patches | Locked | Included categories
 #. ------------+-------------+---------+--------+---------------------
 #. optional   | ...                      ..... | enhancement, feature
-#: src/update.cc:418
+#: src/update.cc:441
 msgid "Included categories"
 msgstr "Catégories incluses"
 
 #. translator: Table headline; 'Needed' refers to patches with status 'needed'
-#: src/update.cc:592
+#: src/update.cc:622
 msgid "Needed software management updates will be installed first:"
 msgstr ""
 "Les mises à jour de gestion des logiciels requises seront installées en "
 "premier :"
 
-#: src/update.cc:600 src/update.cc:842
+#: src/update.cc:630 src/update.cc:877
 msgid "No updates found."
 msgstr "Aucune mise à jour trouvée."
 
 #. translator: Table headline
-#: src/update.cc:607
+#: src/update.cc:637
 msgid "The following updates are also available:"
 msgstr "Les mises à jour suivantes sont également disponibles :"
 
-#: src/update.cc:700
+#: src/update.cc:730
 msgid "Package updates"
 msgstr "Mises à jour de paquets"
 
 # TLABEL security_2002_08_07_0216__32
-#: src/update.cc:704
+#: src/update.cc:734
 msgid "Pattern updates"
 msgstr "Mises à jour de modèles"
 
-#: src/update.cc:706
+#: src/update.cc:736
 msgid "Product updates"
 msgstr "Mises à jour de produits"
 
 # TLABEL kinternet_2002_02_20_2255__11
-#: src/update.cc:794
+#: src/update.cc:824
 msgid "Current Version"
 msgstr "Version actuelle"
 
 # TLABEL nis_server_2002_01_04_0147__65
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Available Version"
 msgstr "Version disponible"
 
-#: src/update.cc:972
+#: src/update.cc:1007
 msgid "No matching issues found."
 msgstr "Aucun problème correspondant n'a été trouvé."
 
-#: src/update.cc:978
+#: src/update.cc:1013
 msgid "The following matches in issue numbers have been found:"
 msgstr ""
 "Les correspondances suivantes dans les numéros de problèmes ont été "
 "trouvées :"
 
-#: src/update.cc:988
+#: src/update.cc:1023
 msgid "Matches in patch descriptions of the following patches have been found:"
 msgstr ""
 "Des correspondances dans les descriptions des correctifs suivants ont été "
 "trouvées :"
 
-#: src/update.cc:1050
+#: src/update.cc:1085
 #, c-format, boost-format
 msgid "Fix for bugzilla issue number %s was not found or is not needed."
 msgstr ""
 "Le correctif pour le problème Bugzilla numéro %s n'a pas été trouvé ou n'est "
 "pas nécessaire."
 
-#: src/update.cc:1052
+#: src/update.cc:1087
 #, c-format, boost-format
 msgid "Fix for CVE issue number %s was not found or is not needed."
 msgstr ""
@@ -7184,7 +7196,7 @@ msgstr ""
 "nécessaire."
 
 #. translators: keep '%s issue' together, it's something like 'CVE issue' or 'Bugzilla issue'
-#: src/update.cc:1055
+#: src/update.cc:1090
 #, c-format, boost-format
 msgid "Fix for %s issue number %s was not found or is not needed."
 msgstr ""

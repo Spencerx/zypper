@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 12:49+0100\n"
+"POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2026-03-20 06:04+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/zypper/master/"
@@ -1380,8 +1380,8 @@ msgid ""
 "The link must point to your core products .prod file in /etc/products.d.\n"
 msgstr ""
 "Symlink /etc/products.d/baseproduct tidak benar atau hilang!\n"
-"Tautan harus mengarah ke produk inti Anda pada berkas .prod di /etc/"
-"products.d.\n"
+"Tautan harus mengarah ke produk inti Anda pada berkas .prod di /etc/products."
+"d.\n"
 
 #. TranslatorExplanation The %s is "--plus-repo"
 #. TranslatorExplanation The %s is "--option-name"
@@ -2217,9 +2217,9 @@ msgid ""
 msgstr ""
 "Karena penanganan paket yang tidak terawat, dist-upgrade sangat bergantung "
 "pada pengaturan repositori yang benar dibandingkan perintah lainnya. Proses "
-"ini tidak boleh dilanjutkan jika repositori yang diaktifkan gagal "
-"diperbarui.Kondisi ini dapat menyebabkan kerusakan serius pada sistem. Jika "
-"repositori yang gagal sebenarnya tidak diperlukan, repositori tersebut harus "
+"ini tidak boleh dilanjutkan jika repositori yang diaktifkan gagal diperbarui."
+"Kondisi ini dapat menyebabkan kerusakan serius pada sistem. Jika repositori "
+"yang gagal sebenarnya tidak diperlukan, repositori tersebut harus "
 "dinonaktifkan."
 
 #: src/commands/distupgrade.cc:57
@@ -2513,6 +2513,23 @@ msgstr ""
 "Daftar semua paket yang versi lebih baru tersedia, terlepas apakah mereka "
 "dapat dipasang atau tidak."
 
+#: src/commands/listupdates.cc:48 src/commands/solveroptionset.cc:24
+#, boost-format
+msgid "Valid values: %1%"
+msgstr "Nilai valid: %1%"
+
+#: src/commands/listupdates.cc:50
+msgid "LEVEL"
+msgstr ""
+
+#. translators: --filter-version-change
+#: src/commands/listupdates.cc:53
+msgid ""
+"Filter updates by version change significance. LEVEL: 'none' (default, show "
+"all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
+"changes, i.e. same upstream version)."
+msgstr ""
+
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
 msgid "addlocale (aloc) [OPTIONS] <LOCALE> ..."
@@ -2698,7 +2715,7 @@ msgstr[0] "Kunci %lu dihapus."
 #: src/commands/repos/list.cc:236 src/commands/services/list.cc:91
 #: src/commands/services/list.cc:161 src/info.cc:92 src/info.cc:718
 #: src/info.cc:937 src/locales.cc:201 src/search.cc:48 src/search.cc:199
-#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:789
+#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:819
 #: src/utils/misc.cc:324
 msgid "Name"
 msgstr "Nama"
@@ -2718,7 +2735,7 @@ msgstr "Tipe"
 #. translators: property name; short; used like "Name: value"
 #. translators: package's repository (header)
 #: src/commands/locks/list.cc:136 src/info.cc:90 src/search.cc:56
-#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:786
+#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:816
 #: src/utils/misc.cc:323
 msgid "Repository"
 msgstr "Repositori"
@@ -3572,7 +3589,7 @@ msgstr "Alias"
 #. translator: Option argument like '--export <FILE.repo>'. Do do not translate lowercase wordparts
 #: src/commands/repos/list.cc:51 src/commands/repos/list.cc:54
 #: src/commands/repos/list.cc:292 src/commands/services/add.cc:96
-#: src/commands/services/list.cc:172 src/repos.cc:1242
+#: src/commands/services/list.cc:172 src/repos.cc:1254
 #: src/utils/flags/zyppflags.h:49
 msgid "URI"
 msgstr "URI"
@@ -3581,27 +3598,27 @@ msgstr "URI"
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:58 src/commands/repos/list.cc:244
 #: src/commands/services/add.cc:98 src/commands/services/list.cc:92
-#: src/commands/services/list.cc:162 src/repos.cc:1244
+#: src/commands/services/list.cc:162 src/repos.cc:1256
 msgid "Enabled"
 msgstr "Aktifkan"
 
 #. GPG Check
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:59 src/commands/repos/list.cc:248
-#: src/commands/services/list.cc:163 src/repos.cc:1246
+#: src/commands/services/list.cc:163 src/repos.cc:1258
 msgid "GPG Check"
 msgstr "Periksa GPG"
 
 #. translators: repository priority (in zypper repos -p or -d)
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:60 src/commands/repos/list.cc:276
-#: src/commands/services/list.cc:169 src/repos.cc:1250
+#: src/commands/services/list.cc:169 src/repos.cc:1262
 msgid "Priority"
 msgstr "Prioritas"
 
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:61 src/commands/services/add.cc:100
-#: src/commands/services/list.cc:93 src/repos.cc:1248
+#: src/commands/services/list.cc:93 src/repos.cc:1260
 msgid "Autorefresh"
 msgstr "Segarkan otomatis"
 
@@ -3658,7 +3675,7 @@ msgid "Export all defined repositories as a single local .repo file."
 msgstr ""
 "Ekspor semua repositori yang ditetapkan sebagai satu berkas .repo lokal."
 
-#: src/commands/repos/list.cc:129 src/repos.cc:999
+#: src/commands/repos/list.cc:129 src/repos.cc:1011
 msgid "Error reading repositories:"
 msgstr "Galat saat membaca repositori:"
 
@@ -3809,7 +3826,7 @@ msgstr "Opsi global '%s' tidak berpengaruh di sini."
 msgid "Arguments are not allowed if '%s' is used."
 msgstr "Argumen tidak diizinkan jika '%s' digunakan."
 
-#: src/commands/repos/refresh.cc:241 src/repos.cc:1011
+#: src/commands/repos/refresh.cc:241 src/repos.cc:1023
 msgid "Specified repositories: "
 msgstr "Repositori yang ditentukan: "
 
@@ -3818,7 +3835,7 @@ msgstr "Repositori yang ditentukan: "
 msgid "Refreshing repository '%s'."
 msgstr "Menyegarkan repositori '%s'."
 
-#: src/commands/repos/refresh.cc:282 src/repos.cc:836
+#: src/commands/repos/refresh.cc:282 src/repos.cc:848
 #, c-format, boost-format
 msgid "Scanning content of disabled repository '%s'."
 msgstr "Memindai isi repositori yang tidak aktif '%s'."
@@ -3828,7 +3845,7 @@ msgstr "Memindai isi repositori yang tidak aktif '%s'."
 msgid "Skipping disabled repository '%s'"
 msgstr "Melewati repositori '%s' yang dinonaktifkan"
 
-#: src/commands/repos/refresh.cc:308 src/repos.cc:854 src/repos.cc:901
+#: src/commands/repos/refresh.cc:308 src/repos.cc:866 src/repos.cc:913
 #, c-format, boost-format
 msgid "Skipping repository '%s' because of the above error."
 msgstr "Melewati repositori '%s' karena galat di atas."
@@ -3856,7 +3873,7 @@ msgstr ""
 msgid "Could not refresh the repositories because of errors."
 msgstr "Tidak dapat menyegarkan repositori karena galat."
 
-#: src/commands/repos/refresh.cc:344 src/repos.cc:930
+#: src/commands/repos/refresh.cc:344 src/repos.cc:942
 msgid "Some of the repositories have not been refreshed because of an error."
 msgstr "Beberapa repositori belum disegarkan karena ada galat."
 
@@ -3911,12 +3928,12 @@ msgstr ""
 msgid "Repository '%s' renamed to '%s'."
 msgstr "Repositori '%s' diganti namanya menjadi '%s'."
 
-#: src/commands/repos/rename.cc:47 src/repos.cc:1190
+#: src/commands/repos/rename.cc:47 src/repos.cc:1202
 #, c-format, boost-format
 msgid "Repository named '%s' already exists. Please use another alias."
 msgstr "Repositori bernama '%s' sudah ada. Silakan gunakan alias lain."
 
-#: src/commands/repos/rename.cc:52 src/repos.cc:1668
+#: src/commands/repos/rename.cc:52 src/repos.cc:1680
 msgid "Error while modifying the repository:"
 msgstr "Galat saat memodifikasi repositori:"
 
@@ -4078,8 +4095,8 @@ msgid ""
 "Use the global GPG check setting defined in /etc/zypp/zypp.conf. This is the "
 "default."
 msgstr ""
-"Gunakan pengaturan pemeriksaan GPG global yang ditentukan di /etc/zypp/"
-"zypp.conf. Ini sudah bawaan."
+"Gunakan pengaturan pemeriksaan GPG global yang ditentukan di /etc/zypp/zypp."
+"conf. Ini sudah bawaan."
 
 #. translators: -a, --alias
 #: src/commands/reposerviceoptionsets.cc:182
@@ -4383,7 +4400,7 @@ msgstr ""
 "Seperti --details, dengan informasi tambahan di mana pencarian yang cocok "
 "(berguna untuk pencarian dalam dependensi)."
 
-#: src/commands/search/search.cc:298 src/repos.cc:773
+#: src/commands/search/search.cc:298 src/repos.cc:785
 #, c-format, boost-format
 msgid "Specified repository '%s' is disabled."
 msgstr "Repositori '%s' yang telah ditentukan dinonaktifkan."
@@ -4402,7 +4419,7 @@ msgstr ""
 msgid "See the above message for a hint."
 msgstr "Lihat pesan di atas untuk petunjuk."
 
-#: src/commands/search/search.cc:505 src/repos.cc:978
+#: src/commands/search/search.cc:505 src/repos.cc:990
 msgid "Running 'zypper refresh' as root might resolve the problem."
 msgstr ""
 "Menjalankan 'zypper refresh' sebagai root mungkin bisa menyelesaikan masalah."
@@ -4508,7 +4525,7 @@ msgid "Problem retrieving the repository index file for service '%s':"
 msgstr "Masalah mengambil berkas indeks repositori untuk layanan '%s':"
 
 #: src/commands/services/common.cc:195 src/commands/services/refresh.cc:159
-#: src/repos.cc:1720
+#: src/repos.cc:1730
 #, c-format, boost-format
 msgid "Skipping service '%s' because of the above error."
 msgstr "Melewati layanan '%s' karena galat di atas."
@@ -4801,11 +4818,6 @@ msgstr "Keluar dari shell zypper saat ini."
 #: src/commands/shell.cc:74
 msgid "This command only makes sense in the zypper shell."
 msgstr "Perintah ini hanya berguna di zypper shell."
-
-#: src/commands/solveroptionset.cc:24
-#, boost-format
-msgid "Valid values: %1%"
-msgstr "Nilai valid: %1%"
 
 #: src/commands/solveroptionset.cc:36 src/commands/solveroptionset.cc:59
 msgid "Solver options"
@@ -5482,7 +5494,7 @@ msgstr "Versi"
 #. translators: property name; short; used like "Name: value"
 #. translators: package architecture (header)
 #: src/info.cc:96 src/search.cc:54 src/search.cc:460 src/search.cc:510
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Arch"
 msgstr "Arsitektur"
 
@@ -5577,7 +5589,7 @@ msgstr "URL hulu"
 #. translators: property name; short; used like "Name: value"
 #. translator: Table column header.
 #. Name
-#: src/info.cc:501 src/update.cc:406 src/utils/misc.cc:325
+#: src/info.cc:501 src/update.cc:429 src/utils/misc.cc:325
 #: src/utils/misc.cc:367
 msgid "Category"
 msgstr "Kategori"
@@ -5638,7 +5650,7 @@ msgstr "(kosong)"
 #. TranslatorExplanation S stands for Status
 #: src/info.cc:717 src/info.cc:936 src/locales.cc:199 src/search.cc:46
 #: src/search.cc:198 src/search.cc:303 src/search.cc:456 src/search.cc:503
-#: src/update.cc:784
+#: src/update.cc:814
 msgid "S"
 msgstr "S"
 
@@ -5969,7 +5981,7 @@ msgstr "Galat saat menonaktifkan repositori '%s'."
 msgid "Problem retrieving files from '%s'."
 msgstr "Masalah mengambil berkas dari '%s'."
 
-#: src/repos.cc:341 src/repos.cc:1859 src/solve-commit.cc:990
+#: src/repos.cc:341 src/repos.cc:1869 src/solve-commit.cc:990
 #: src/solve-commit.cc:1022 src/solve-commit.cc:1046
 msgid "Please see the above error message for a hint."
 msgstr "Silahkan lihat pesan galat di atas sebagai petunjuk."
@@ -6042,33 +6054,33 @@ msgstr "Metadata repositori untuk '%s' tidak ditemukan di singgahan lokal."
 msgid "Error building the cache:"
 msgstr "Galat saat membangun singgahan:"
 
-#: src/repos.cc:673
+#: src/repos.cc:685
 #, c-format, boost-format
 msgid "Repository '%s' not found by its alias, number, or URI."
 msgstr "Repositori '%s' tidak ditemukan berdasarkan alias, nomor atau URI."
 
-#: src/repos.cc:675
+#: src/repos.cc:687
 #, c-format, boost-format
 msgid "Use '%s' to get the list of defined repositories."
 msgstr "Gunakan '%s' untuk mendapatkan daftar repositori yang ditentukan."
 
-#: src/repos.cc:695
+#: src/repos.cc:707
 #, c-format, boost-format
 msgid "Ignoring disabled repository '%s'"
 msgstr "Mengabaikan repositori yang dinonaktifkan '%s'"
 
-#: src/repos.cc:779
+#: src/repos.cc:791
 #, c-format, boost-format
 msgid "Global option '%s' can be used to temporarily enable repositories."
 msgstr ""
 "Opsi global '%s' dapat digunakan untuk mengaktifkan repositori sementara."
 
-#: src/repos.cc:795 src/repos.cc:801
+#: src/repos.cc:807 src/repos.cc:813
 #, c-format, boost-format
 msgid "Ignoring repository '%s' because of '%s' option."
 msgstr "Mengabaikan repositori '%s' karena opsi '%s'."
 
-#: src/repos.cc:822 src/repos.cc:915
+#: src/repos.cc:834 src/repos.cc:927
 #, c-format, boost-format
 msgid "Temporarily enabling repository '%s'."
 msgstr "Mengaktifkan repository '%s' sementara."
@@ -6076,7 +6088,7 @@ msgstr "Mengaktifkan repository '%s' sementara."
 #. bsc#1235636: Asks to suppress reporting the Exception (usually: No permission to
 #. write repository cache), because it scares. This was was indeed the legacy behavior:
 #. SUPPRESS: zypper.out().error( ex, "Problem" );
-#: src/repos.cc:879
+#: src/repos.cc:891
 #, c-format, boost-format
 msgid ""
 "Repository '%s' is out-of-date. You can run 'zypper refresh' as root to "
@@ -6085,7 +6097,7 @@ msgstr ""
 "Repositori '%s' sudah usang. Anda bisa melakukan 'zypper refresh' dari root "
 "untuk memperbaruinya."
 
-#: src/repos.cc:896
+#: src/repos.cc:908
 #, c-format, boost-format
 msgid ""
 "The metadata cache needs to be built for the '%s' repository. You can run "
@@ -6094,82 +6106,82 @@ msgstr ""
 "Singgahan metadata perlu dibangun untuk repositori '%s'. Anda bisa jalankan "
 "'zypper refresh' sebagai root untuk melakukan ini."
 
-#: src/repos.cc:922
+#: src/repos.cc:934
 #, c-format, boost-format
 msgid "Repository '%s' stays disabled."
 msgstr "Repositori '%s' tetap dinonaktifkan."
 
-#: src/repos.cc:969
+#: src/repos.cc:981
 msgid "Initializing Target"
 msgstr "Inisialisasi Target"
 
-#: src/repos.cc:977
+#: src/repos.cc:989
 msgid "Target initialization failed:"
 msgstr "Inisialisasi target gagal:"
 
-#: src/repos.cc:1059
+#: src/repos.cc:1071
 #, c-format, boost-format
 msgid "Cleaning metadata cache for '%s'."
 msgstr "Membersihkan singgahan metadata untuk '%s'."
 
-#: src/repos.cc:1067
+#: src/repos.cc:1079
 #, c-format, boost-format
 msgid "Cleaning raw metadata cache for '%s'."
 msgstr "Membersihkan singgahan metadata raw untuk '%s'."
 
-#: src/repos.cc:1073
+#: src/repos.cc:1085
 #, c-format, boost-format
 msgid "Keeping raw metadata cache for %s '%s'."
 msgstr "Menyimpan singgahan metadata raw untuk %s '%s'."
 
 #. translators: meaning the cached rpm files
-#: src/repos.cc:1080
+#: src/repos.cc:1092
 #, c-format, boost-format
 msgid "Cleaning packages for '%s'."
 msgstr "Membersihkan paket untuk '%s'."
 
-#: src/repos.cc:1088
+#: src/repos.cc:1100
 #, c-format, boost-format
 msgid "Cannot clean repository '%s' because of an error."
 msgstr "Tidak dapat membersihkan repositori '%s' karena galat."
 
-#: src/repos.cc:1099
+#: src/repos.cc:1111
 msgid "Cleaning installed packages cache."
 msgstr "Membersihkan singgahan paket yang dipasang."
 
-#: src/repos.cc:1108
+#: src/repos.cc:1120
 msgid "Cannot clean installed packages cache because of an error."
 msgstr ""
 "Tidak dapat membersihkan singgahan paket yang dipasang karena kesalahan."
 
-#: src/repos.cc:1126
+#: src/repos.cc:1138
 msgid "Could not clean the repositories because of errors."
 msgstr "Tidak dapat membersihkan repositori karena kesalahan."
 
-#: src/repos.cc:1132
+#: src/repos.cc:1144
 msgid "Some of the repositories have not been cleaned up because of an error."
 msgstr "Beberapa repositori belum dibersihkan karena ada kesalahan."
 
-#: src/repos.cc:1137
+#: src/repos.cc:1149
 msgid "Specified repositories have been cleaned up."
 msgstr "Repositori yang ditentukan telah dibersihkan."
 
-#: src/repos.cc:1139
+#: src/repos.cc:1151
 msgid "All repositories have been cleaned up."
 msgstr "Semua repositori telah dibersihkan."
 
-#: src/repos.cc:1161
+#: src/repos.cc:1173
 msgid "This is a changeable read-only media (CD/DVD), disabling autorefresh."
 msgstr ""
 "Ini adalah media hanya-baca yang dapat diubah (CD/DVD), menonaktifkan "
 "penyegaran otomatis."
 
-#: src/repos.cc:1182
+#: src/repos.cc:1194
 #, c-format, boost-format
 msgid "Invalid repository alias: '%s'"
 msgstr "Alias repositori tidak valid: '%s'"
 
-#: src/repos.cc:1199
+#: src/repos.cc:1211
 msgid ""
 "Could not determine the type of the repository. Please check if the defined "
 "URIs (see below) point to a valid repository:"
@@ -6177,25 +6189,25 @@ msgstr ""
 "Tidak dapat menentukan tipe repositori. Periksa apakah URI yang ditetapkan "
 "(lihat di bawah) menunjuk ke repositori yang valid:"
 
-#: src/repos.cc:1205
+#: src/repos.cc:1217
 msgid "Can't find a valid repository at given location:"
 msgstr "Tidak dapat menemukan repositori yang valid di lokasi yang ditentukan:"
 
-#: src/repos.cc:1213
+#: src/repos.cc:1225
 msgid "Problem transferring repository data from specified URI:"
 msgstr "Masalah mentransfer data repositori dari URI yang ditentukan:"
 
-#: src/repos.cc:1214
+#: src/repos.cc:1226
 msgid "Please check whether the specified URI is accessible."
 msgstr "Harap periksa apakah URI yang ditentukan dapat diakses."
 
-#: src/repos.cc:1221
+#: src/repos.cc:1233
 msgid "Unknown problem when adding repository:"
 msgstr "Masalah tidak dikenal saat menambahkan repositori:"
 
 #. translators: BOOST STYLE POSITIONAL DIRECTIVES ( %N% )
 #. translators: %1% - a repository name
-#: src/repos.cc:1231
+#: src/repos.cc:1243
 #, boost-format
 msgid ""
 "GPG checking is disabled in configuration of repository '%1%'. Integrity and "
@@ -6204,135 +6216,135 @@ msgstr ""
 "Pemeriksaan GPG dinonaktifkan dalam konfigurasi repositori '%1%'. Integritas "
 "dan asal paket tidak dapat diverifikasi."
 
-#: src/repos.cc:1236
+#: src/repos.cc:1248
 #, c-format, boost-format
 msgid "Repository '%s' successfully added"
 msgstr "Repositori '%s' berhasil ditambahkan"
 
-#: src/repos.cc:1262
+#: src/repos.cc:1274
 #, c-format, boost-format
 msgid "Reading data from '%s' media is delayed until next refresh."
 msgstr "Membaca data dari media '%s' ditunda hingga penyegaran berikutnya."
 
-#: src/repos.cc:1267
+#: src/repos.cc:1279
 #, c-format, boost-format
 msgid "Reading data from '%s' media"
 msgstr "Membaca data dari media '%s'"
 
-#: src/repos.cc:1273
+#: src/repos.cc:1285
 #, c-format, boost-format
 msgid "Problem reading data from '%s' media"
 msgstr "Masalah saat membaca data dari media '%s'"
 
-#: src/repos.cc:1274
+#: src/repos.cc:1286
 msgid "Please check if your installation media is valid and readable."
 msgstr "Silakan periksa apakah media pemasangan Anda valid dan mudah dibaca."
 
-#: src/repos.cc:1345
+#: src/repos.cc:1357
 msgid "Problem accessing the file at the specified URI"
 msgstr "Masalah saat mengakses berkas pada URI yang ditentukan"
 
-#: src/repos.cc:1346
+#: src/repos.cc:1358
 msgid "Please check if the URI is valid and accessible."
 msgstr "Harap periksa apakah URI valid dan dapat diakses."
 
-#: src/repos.cc:1353
+#: src/repos.cc:1365
 msgid "Problem parsing the file at the specified URI"
 msgstr "Masalah penguraian berkas pada URI yang ditentukan"
 
 #. TranslatorExplanation Don't translate the '.repo' string.
-#: src/repos.cc:1355
+#: src/repos.cc:1367
 msgid "Is it a .repo file?"
 msgstr "Apakah ini berkas .repo?"
 
-#: src/repos.cc:1362
+#: src/repos.cc:1374
 msgid "Problem encountered while trying to read the file at the specified URI"
 msgstr "Terjadi masalah saat mencoba membaca berkas di URI yang ditentukan"
 
-#: src/repos.cc:1375
+#: src/repos.cc:1387
 msgid "Repository with no alias defined found in the file, skipping."
 msgstr "Repositori tanpa alias yang ditemukan dalam berkas, lewati."
 
-#: src/repos.cc:1381
+#: src/repos.cc:1393
 #, c-format, boost-format
 msgid "Repository '%s' has no URI defined, skipping."
 msgstr "Repositori '%s' tidak memiliki URI yang ditentukan, lewati."
 
-#: src/repos.cc:1429
+#: src/repos.cc:1441
 #, c-format, boost-format
 msgid "Repository '%s' has been removed."
 msgstr "Repositori '%s' telah dihapus."
 
-#: src/repos.cc:1577
+#: src/repos.cc:1589
 #, c-format, boost-format
 msgid "Repository '%s' priority has been left unchanged (%d)"
 msgstr "Prioritas '%s' dari repositori tidak berubah (%d)"
 
-#: src/repos.cc:1610
+#: src/repos.cc:1622
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully enabled."
 msgstr "Repositori '%s' telah berhasil diaktifkan."
 
-#: src/repos.cc:1612
+#: src/repos.cc:1624
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully disabled."
 msgstr "Repositori '%s' telah berhasil dinonaktifkan."
 
-#: src/repos.cc:1619
+#: src/repos.cc:1631
 #, c-format, boost-format
 msgid "Autorefresh has been enabled for repository '%s'."
 msgstr "Segarkan otomatis telah diaktifkan untuk repositori '%s'."
 
-#: src/repos.cc:1621
+#: src/repos.cc:1633
 #, c-format, boost-format
 msgid "Autorefresh has been disabled for repository '%s'."
 msgstr "Segarkan otomatis telah dinonaktifkan untuk repositori '%s'."
 
-#: src/repos.cc:1628
+#: src/repos.cc:1640
 #, c-format, boost-format
 msgid "RPM files caching has been enabled for repository '%s'."
 msgstr "Singgahan berkas RPM telah diaktifkan untuk repositori '%s'."
 
-#: src/repos.cc:1630
+#: src/repos.cc:1642
 #, c-format, boost-format
 msgid "RPM files caching has been disabled for repository '%s'."
 msgstr "Singgahan berkas RPM telah dinonaktifkan untuk repositori '%s'."
 
-#: src/repos.cc:1637
+#: src/repos.cc:1649
 #, c-format, boost-format
 msgid "GPG check has been enabled for repository '%s'."
 msgstr "Pemeriksaan GPG telah diaktifkan untuk repositori '%s'."
 
-#: src/repos.cc:1639
+#: src/repos.cc:1651
 #, c-format, boost-format
 msgid "GPG check has been disabled for repository '%s'."
 msgstr "Pemeriksaan GPG telah dinonaktifkan untuk repositori '%s'."
 
-#: src/repos.cc:1645
+#: src/repos.cc:1657
 #, c-format, boost-format
 msgid "Repository '%s' priority has been set to %d."
 msgstr "Prioritas repositori '%s' telah diatur ke %d."
 
-#: src/repos.cc:1651
+#: src/repos.cc:1663
 #, c-format, boost-format
 msgid "Name of repository '%s' has been set to '%s'."
 msgstr "Nama repositori '%s' telah ditetapkan ke '%s'."
 
-#: src/repos.cc:1662
+#: src/repos.cc:1674
 #, c-format, boost-format
 msgid "Nothing to change for repository '%s'."
 msgstr "Tidak ada yang berubah untuk repositori '%s'."
 
-#: src/repos.cc:1669
+#: src/repos.cc:1681
 #, c-format, boost-format
 msgid "Leaving repository %s unchanged."
 msgstr "Membiarkan repositori %s tidak berubah."
 
-#: src/repos.cc:1756
+#: src/repos.cc:1766
 msgid "Loading repository data..."
 msgstr "Memuat data repositori..."
 
-#: src/repos.cc:1758
+#: src/repos.cc:1768
 msgid ""
 "No repositories defined. Operating only with the installed resolvables. "
 "Nothing can be installed."
@@ -6340,43 +6352,43 @@ msgstr ""
 "Tidak ada repositori yang ditentukan. Beroperasi hanya dengan perbaikan yang "
 "terpasang. Tidak ada yang bisa dipasang."
 
-#: src/repos.cc:1781
+#: src/repos.cc:1791
 #, c-format, boost-format
 msgid "Retrieving repository '%s' data..."
 msgstr "Mengambil data repositori '%s'..."
 
-#: src/repos.cc:1789
+#: src/repos.cc:1799
 #, c-format, boost-format
 msgid "Repository '%s' not cached. Caching..."
 msgstr "Repositori '%s' tidak di-singgahan. Membuat singgahan..."
 
-#: src/repos.cc:1795 src/repos.cc:1829
+#: src/repos.cc:1805 src/repos.cc:1839
 #, c-format, boost-format
 msgid "Problem loading data from '%s'"
 msgstr "Masalah memuat data dari '%s'"
 
-#: src/repos.cc:1799
+#: src/repos.cc:1809
 #, c-format, boost-format
 msgid "Repository '%s' could not be refreshed. Using old cache."
 msgstr "Repositori '%s' tidak dapat disegarkan. Menggunakan singgahan lama."
 
-#: src/repos.cc:1803 src/repos.cc:1832
+#: src/repos.cc:1813 src/repos.cc:1842
 #, c-format, boost-format
 msgid "Resolvables from '%s' not loaded because of error."
 msgstr "Perbaikan dari '%s' tidak dimuat karena kesalahan."
 
-#: src/repos.cc:1819
+#: src/repos.cc:1829
 #, boost-format
 msgid "Repository '%1%' metadata expired since %2%."
 msgstr "Metadata repositori '%1%' kedaluwarsa sejak %2%."
 
 #. translators: the first %s is 'zypper refresh' and the second 'zypper clean -m'
-#: src/repos.cc:1831
+#: src/repos.cc:1841
 #, c-format, boost-format
 msgid "Try '%s', or even '%s' before doing so."
 msgstr "Coba '%s', atau bahkan '%s' sebelum melakukannya."
 
-#: src/repos.cc:1836
+#: src/repos.cc:1846
 msgid ""
 "Repository metadata expired: Check if 'autorefresh' is turned on (zypper "
 "lr), otherwise manually refresh the repository (zypper ref). If this does "
@@ -6389,30 +6401,30 @@ msgstr ""
 "rusak atau peladen yang sebenarnya telah dihentikan untuk mendukung "
 "repositori."
 
-#: src/repos.cc:1849
+#: src/repos.cc:1859
 msgid "Reading installed packages..."
 msgstr "Membaca paket yang dipasang..."
 
-#: src/repos.cc:1858
+#: src/repos.cc:1868
 msgid "Problem occurred while reading the installed packages:"
 msgstr "Masalah terjadi saat membaca paket yang dipasang:"
 
-#: src/repos.cc:1875
+#: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
 msgstr "'%s' sepertinya file RPM. Akan coba digunakan."
 
-#: src/repos.cc:1884
+#: src/repos.cc:1894
 #, c-format, boost-format
 msgid "Problem with the RPM file specified as '%s', skipping."
 msgstr "Masalah dengan berkas RPM yang ditentukan sebagai '%s', lewati."
 
-#: src/repos.cc:1906
+#: src/repos.cc:1916
 #, c-format, boost-format
 msgid "Problem reading the RPM header of %s. Is it an RPM file?"
 msgstr "Masalah saat membaca header RPM dari %s. Apakah ini berkas RPM?"
 
-#: src/repos.cc:1926
+#: src/repos.cc:1936
 msgid "Plain RPM files cache"
 msgstr "Singgahan berkas RPM biasa"
 
@@ -6581,8 +6593,8 @@ msgstr ""
 #: src/solve-commit.cc:620
 #, c-format, boost-format
 msgid ""
-"Check for running processes using deleted libraries is disabled in "
-"zypper.conf. Run '%s' to check manually."
+"Check for running processes using deleted libraries is disabled in zypper."
+"conf. Run '%s' to check manually."
 msgstr ""
 "Periksa proses yang berjalan menggunakan pustaka yang dihapus yang "
 "dinonaktifkan di zypper.conf. Jalankan '%s' untuk memeriksa secara manual."
@@ -6776,28 +6788,28 @@ msgid "Dependencies of all installed packages are satisfied."
 msgstr "Dependensi dari semua paket yang dipasang dipenuhi."
 
 #. translator: stats table header (plural number is %2%)
-#: src/update.cc:336
+#: src/update.cc:359
 #, boost-format
 msgid "Considering %1% out of %2% applicable patches:"
 msgid_plural "Considering %1% out of %2% applicable patches:"
 msgstr[0] "Mempertimbangkan %1% dari %2% tambalan yang bisa diterapkan:"
 
 #. translator: stats table header
-#: src/update.cc:340
+#: src/update.cc:363
 #, boost-format
 msgid "Found %1% applicable patch:"
 msgid_plural "Found %1% applicable patches:"
 msgstr[0] "Ditemukan %1% tambalan yang bisa diterapkan:"
 
 #. translator: stats summary
-#: src/update.cc:350
+#: src/update.cc:373
 #, c-format, boost-format
 msgid "%d patch locked"
 msgid_plural "%d patches locked"
 msgstr[0] "%d tambalan dikunci"
 
 #. translator: stats summary
-#: src/update.cc:358
+#: src/update.cc:381
 #, c-format, boost-format
 msgid "%d patch optional"
 msgid_plural "%d patches optional"
@@ -6805,37 +6817,37 @@ msgstr[0] "%d tambalan opsional"
 
 #. translator: Hint displayed right adjusted; %1% is a CLI option
 #. "42 patches optional                  (use --with-optional to include optional patches)"
-#: src/update.cc:362
+#: src/update.cc:385
 #, boost-format
 msgid "use '%1%' to include optional patches"
 msgstr "gunakan '%1%' untuk menyertakan tambalan opsional"
 
 #. translator: stats summary
-#: src/update.cc:371
+#: src/update.cc:394
 #, c-format, boost-format
 msgid "%d patch needed"
 msgid_plural "%d patches needed"
 msgstr[0] "%d tambalan dibutuhkan"
 
 #. translator: stats summary
-#: src/update.cc:374
+#: src/update.cc:397
 #, c-format, boost-format
 msgid "%d security patch"
 msgid_plural "%d security patches"
 msgstr[0] "%d tambalan keamanan"
 
 #. translator: Table column header.
-#: src/update.cc:408
+#: src/update.cc:431
 msgid "Updatestack"
 msgstr "Updatestack"
 
 #. translator: Table column header.
-#: src/update.cc:410 src/update.cc:702
+#: src/update.cc:433 src/update.cc:732
 msgid "Patches"
 msgstr "Tambalan"
 
 #. translator: Table column header.
-#: src/update.cc:412
+#: src/update.cc:435
 msgid "Locked"
 msgstr "Terkunci"
 
@@ -6844,73 +6856,73 @@ msgstr "Terkunci"
 #. Category    | Updatestack | Patches | Locked | Included categories
 #. ------------+-------------+---------+--------+---------------------
 #. optional   | ...                      ..... | enhancement, feature
-#: src/update.cc:418
+#: src/update.cc:441
 msgid "Included categories"
 msgstr "Kategori yang disertakan"
 
 #. translator: Table headline; 'Needed' refers to patches with status 'needed'
-#: src/update.cc:592
+#: src/update.cc:622
 msgid "Needed software management updates will be installed first:"
 msgstr ""
 "Pemutakhiran pengelolaan perangkat lunak yang diperlukan akan dipasang "
 "terlebih dahulu:"
 
-#: src/update.cc:600 src/update.cc:842
+#: src/update.cc:630 src/update.cc:877
 msgid "No updates found."
 msgstr "Tidak ada pemutakhiran yang ditemukan."
 
 #. translator: Table headline
-#: src/update.cc:607
+#: src/update.cc:637
 msgid "The following updates are also available:"
 msgstr "Pemutakhiran berikut ini juga tersedia:"
 
-#: src/update.cc:700
+#: src/update.cc:730
 msgid "Package updates"
 msgstr "Pemutakhiran paket"
 
-#: src/update.cc:704
+#: src/update.cc:734
 msgid "Pattern updates"
 msgstr "Pemutakhiran pola"
 
-#: src/update.cc:706
+#: src/update.cc:736
 msgid "Product updates"
 msgstr "Pemutakhiran produk"
 
-#: src/update.cc:794
+#: src/update.cc:824
 msgid "Current Version"
 msgstr "Versi Saat Ini"
 
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Available Version"
 msgstr "Versi yang Tersedia"
 
-#: src/update.cc:972
+#: src/update.cc:1007
 msgid "No matching issues found."
 msgstr "Tidak ditemukan isu yang cocok."
 
-#: src/update.cc:978
+#: src/update.cc:1013
 msgid "The following matches in issue numbers have been found:"
 msgstr "Kecocokan berikut dengan nomor isu telah ditemukan:"
 
-#: src/update.cc:988
+#: src/update.cc:1023
 msgid "Matches in patch descriptions of the following patches have been found:"
 msgstr ""
 "Kecocokan dalam deskripsi tambalan dari tambalan berikut telah ditemukan:"
 
-#: src/update.cc:1050
+#: src/update.cc:1085
 #, c-format, boost-format
 msgid "Fix for bugzilla issue number %s was not found or is not needed."
 msgstr ""
 "Perbaikan untuk isu bugzilla nomor %s tidak ditemukan atau tidak dibutuhkan."
 
-#: src/update.cc:1052
+#: src/update.cc:1087
 #, c-format, boost-format
 msgid "Fix for CVE issue number %s was not found or is not needed."
 msgstr ""
 "Perbaikan untuk isu CVE nomor %s tidak ditemukan atau tidak diperlukan."
 
 #. translators: keep '%s issue' together, it's something like 'CVE issue' or 'Bugzilla issue'
-#: src/update.cc:1055
+#: src/update.cc:1090
 #, c-format, boost-format
 msgid "Fix for %s issue number %s was not found or is not needed."
 msgstr "Perbaikan untuk isu %s nomor %s tidak ditemukan atau tidak diperlukan."

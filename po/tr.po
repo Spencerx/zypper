@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 12:49+0100\n"
+"POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2026-02-23 16:04+0000\n"
 "Last-Translator: Akın Birdal <reend21@protonmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/zypper/master/tr/"
@@ -2553,8 +2553,8 @@ msgid ""
 msgstr ""
 "Bağımlı paketleri kaldırmaktansa değiştirmeyi tercih eden bir kaldırma "
 "komutu. Aslında bu, düz argümanlarına (-) uygulanan kaldırma değiştiricisi "
-"ile tam özellikli bir yükleme komutudur. Yani 'removeptf foo', 'install -- "
-"-foo' ile aynıdır. Bu yüzden komut, yükleme komutuyla aynı seçenekleri kabul "
+"ile tam özellikli bir yükleme komutudur. Yani 'removeptf foo', 'install -- -"
+"foo' ile aynıdır. Bu yüzden komut, yükleme komutuyla aynı seçenekleri kabul "
 "eder. Bir PTF'yi (Program Geçici Düzeltmesi) kaldırmanın önerilen yoludur."
 
 #: src/commands/installremove.cc:317
@@ -2614,6 +2614,23 @@ msgid ""
 msgstr ""
 "Yüklenebilir olup olmadıklarına bakılmaksızın, daha yeni sürümlerin mevcut "
 "olduğu tüm paketleri listeleyin."
+
+#: src/commands/listupdates.cc:48 src/commands/solveroptionset.cc:24
+#, boost-format
+msgid "Valid values: %1%"
+msgstr "Geçerli değerler: %1%"
+
+#: src/commands/listupdates.cc:50
+msgid "LEVEL"
+msgstr ""
+
+#. translators: --filter-version-change
+#: src/commands/listupdates.cc:53
+msgid ""
+"Filter updates by version change significance. LEVEL: 'none' (default, show "
+"all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
+"changes, i.e. same upstream version)."
+msgstr ""
 
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
@@ -2803,7 +2820,7 @@ msgstr[1] "%lu kilit silindi."
 #: src/commands/repos/list.cc:236 src/commands/services/list.cc:91
 #: src/commands/services/list.cc:161 src/info.cc:92 src/info.cc:718
 #: src/info.cc:937 src/locales.cc:201 src/search.cc:48 src/search.cc:199
-#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:789
+#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:819
 #: src/utils/misc.cc:324
 msgid "Name"
 msgstr "Ad"
@@ -2823,7 +2840,7 @@ msgstr "Tür"
 #. translators: property name; short; used like "Name: value"
 #. translators: package's repository (header)
 #: src/commands/locks/list.cc:136 src/info.cc:90 src/search.cc:56
-#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:786
+#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:816
 #: src/utils/misc.cc:323
 msgid "Repository"
 msgstr "Depo"
@@ -3673,7 +3690,7 @@ msgstr "Takma ad"
 #. translator: Option argument like '--export <FILE.repo>'. Do do not translate lowercase wordparts
 #: src/commands/repos/list.cc:51 src/commands/repos/list.cc:54
 #: src/commands/repos/list.cc:292 src/commands/services/add.cc:96
-#: src/commands/services/list.cc:172 src/repos.cc:1242
+#: src/commands/services/list.cc:172 src/repos.cc:1254
 #: src/utils/flags/zyppflags.h:49
 msgid "URI"
 msgstr "URI"
@@ -3682,27 +3699,27 @@ msgstr "URI"
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:58 src/commands/repos/list.cc:244
 #: src/commands/services/add.cc:98 src/commands/services/list.cc:92
-#: src/commands/services/list.cc:162 src/repos.cc:1244
+#: src/commands/services/list.cc:162 src/repos.cc:1256
 msgid "Enabled"
 msgstr "Etkinleştirilmiş"
 
 #. GPG Check
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:59 src/commands/repos/list.cc:248
-#: src/commands/services/list.cc:163 src/repos.cc:1246
+#: src/commands/services/list.cc:163 src/repos.cc:1258
 msgid "GPG Check"
 msgstr "GPG Kontrolü"
 
 #. translators: repository priority (in zypper repos -p or -d)
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:60 src/commands/repos/list.cc:276
-#: src/commands/services/list.cc:169 src/repos.cc:1250
+#: src/commands/services/list.cc:169 src/repos.cc:1262
 msgid "Priority"
 msgstr "Öncelik"
 
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:61 src/commands/services/add.cc:100
-#: src/commands/services/list.cc:93 src/repos.cc:1248
+#: src/commands/services/list.cc:93 src/repos.cc:1260
 msgid "Autorefresh"
 msgstr "Otomatik yenileme"
 
@@ -3760,7 +3777,7 @@ msgid "Export all defined repositories as a single local .repo file."
 msgstr ""
 "Tanımları depoların tamamını tek bir yerel .repo dosyası olarak dışa aktar."
 
-#: src/commands/repos/list.cc:129 src/repos.cc:999
+#: src/commands/repos/list.cc:129 src/repos.cc:1011
 msgid "Error reading repositories:"
 msgstr "Depolar okunurken hata:"
 
@@ -3908,7 +3925,7 @@ msgstr "'%s' evrensel seçeneğinin burada etkisi yok."
 msgid "Arguments are not allowed if '%s' is used."
 msgstr "\"%s\" kullanılıyorsa bağımsız değişkenlere izin verilmez."
 
-#: src/commands/repos/refresh.cc:241 src/repos.cc:1011
+#: src/commands/repos/refresh.cc:241 src/repos.cc:1023
 msgid "Specified repositories: "
 msgstr "Belirtilen depolar: "
 
@@ -3917,7 +3934,7 @@ msgstr "Belirtilen depolar: "
 msgid "Refreshing repository '%s'."
 msgstr "'%s' deposu yenileniyor."
 
-#: src/commands/repos/refresh.cc:282 src/repos.cc:836
+#: src/commands/repos/refresh.cc:282 src/repos.cc:848
 #, c-format, boost-format
 msgid "Scanning content of disabled repository '%s'."
 msgstr "Devre dışı bırakılmış '%s' deposunun içeriği taranıyor."
@@ -3927,7 +3944,7 @@ msgstr "Devre dışı bırakılmış '%s' deposunun içeriği taranıyor."
 msgid "Skipping disabled repository '%s'"
 msgstr "Devre dışı olan '%s' deposu atlanıyor"
 
-#: src/commands/repos/refresh.cc:308 src/repos.cc:854 src/repos.cc:901
+#: src/commands/repos/refresh.cc:308 src/repos.cc:866 src/repos.cc:913
 #, c-format, boost-format
 msgid "Skipping repository '%s' because of the above error."
 msgstr "Üstteki hatadan dolayı '%s' deposu atlanıyor."
@@ -3956,7 +3973,7 @@ msgstr ""
 msgid "Could not refresh the repositories because of errors."
 msgstr "Hatadan dolayı depoyu yenileyemezsiniz."
 
-#: src/commands/repos/refresh.cc:344 src/repos.cc:930
+#: src/commands/repos/refresh.cc:344 src/repos.cc:942
 msgid "Some of the repositories have not been refreshed because of an error."
 msgstr "Bazı depolar bir hatadan dolayı yenilenemedi."
 
@@ -4013,12 +4030,12 @@ msgstr ""
 msgid "Repository '%s' renamed to '%s'."
 msgstr "'%s' deposunun adı '%s' olarak değiştirildi."
 
-#: src/commands/repos/rename.cc:47 src/repos.cc:1190
+#: src/commands/repos/rename.cc:47 src/repos.cc:1202
 #, c-format, boost-format
 msgid "Repository named '%s' already exists. Please use another alias."
 msgstr "'%s' isimli depo bulunmakta. Lütfen başka bir isim kullanın."
 
-#: src/commands/repos/rename.cc:52 src/repos.cc:1668
+#: src/commands/repos/rename.cc:52 src/repos.cc:1680
 msgid "Error while modifying the repository:"
 msgstr "Depo üzerinde değişiklik yapılırken hata oluştu:"
 
@@ -4481,7 +4498,7 @@ msgstr ""
 "--details gibi, aramanın eşleştiği ek bilgilerle (bağımlılıklarda arama "
 "yapmak için kullanışlıdır)."
 
-#: src/commands/search/search.cc:298 src/repos.cc:773
+#: src/commands/search/search.cc:298 src/repos.cc:785
 #, c-format, boost-format
 msgid "Specified repository '%s' is disabled."
 msgstr "Belirtilen '%s' deposu devre dışı."
@@ -4500,7 +4517,7 @@ msgstr "Arama sorgusu başlatılırken ya da yürütülürken hata oluştu"
 msgid "See the above message for a hint."
 msgstr "İp uçları için üstteki mesaja balın."
 
-#: src/commands/search/search.cc:505 src/repos.cc:978
+#: src/commands/search/search.cc:505 src/repos.cc:990
 msgid "Running 'zypper refresh' as root might resolve the problem."
 msgstr ""
 "'zypper refresh' komutunu yönetici olarak çalıştırmak sorunu çözebilir."
@@ -4607,7 +4624,7 @@ msgid "Problem retrieving the repository index file for service '%s':"
 msgstr "'%s' hizmeti için depo dizin dosyası alınırken sorun:"
 
 #: src/commands/services/common.cc:195 src/commands/services/refresh.cc:159
-#: src/repos.cc:1720
+#: src/repos.cc:1730
 #, c-format, boost-format
 msgid "Skipping service '%s' because of the above error."
 msgstr "'%s' hizmeti yukarıdaki hatadan dolayı atlanıyor."
@@ -4907,11 +4924,6 @@ msgstr "Şimdiki zypper kabuğundan çık."
 #: src/commands/shell.cc:74
 msgid "This command only makes sense in the zypper shell."
 msgstr "Bu komut sadece zypper shell. geçerli."
-
-#: src/commands/solveroptionset.cc:24
-#, boost-format
-msgid "Valid values: %1%"
-msgstr "Geçerli değerler: %1%"
 
 #: src/commands/solveroptionset.cc:36 src/commands/solveroptionset.cc:59
 msgid "Solver options"
@@ -5591,7 +5603,7 @@ msgstr "Sürüm"
 #. translators: property name; short; used like "Name: value"
 #. translators: package architecture (header)
 #: src/info.cc:96 src/search.cc:54 src/search.cc:460 src/search.cc:510
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Arch"
 msgstr "Mimari"
 
@@ -5693,7 +5705,7 @@ msgstr "Upstream URL"
 #. translators: property name; short; used like "Name: value"
 #. translator: Table column header.
 #. Name
-#: src/info.cc:501 src/update.cc:406 src/utils/misc.cc:325
+#: src/info.cc:501 src/update.cc:429 src/utils/misc.cc:325
 #: src/utils/misc.cc:367
 msgid "Category"
 msgstr "Kategori"
@@ -5756,7 +5768,7 @@ msgstr "(boş)"
 #. TranslatorExplanation S stands for Status
 #: src/info.cc:717 src/info.cc:936 src/locales.cc:199 src/search.cc:46
 #: src/search.cc:198 src/search.cc:303 src/search.cc:456 src/search.cc:503
-#: src/update.cc:784
+#: src/update.cc:814
 msgid "S"
 msgstr "S"
 
@@ -6091,7 +6103,7 @@ msgstr "'%s' deposu devre dışı bırakılırken hata oluştu."
 msgid "Problem retrieving files from '%s'."
 msgstr "'%s' konumundan dosyaları almada sorun oluştu."
 
-#: src/repos.cc:341 src/repos.cc:1859 src/solve-commit.cc:990
+#: src/repos.cc:341 src/repos.cc:1869 src/solve-commit.cc:990
 #: src/solve-commit.cc:1022 src/solve-commit.cc:1046
 msgid "Please see the above error message for a hint."
 msgstr "Lütfen ipucu için yukarıdaki hata mesajına bakınız."
@@ -6167,22 +6179,22 @@ msgid "Error building the cache:"
 msgstr "Önbellek oluşturulurken hata oluştu:"
 
 # clients/rc_config_step1.ycp:253
-#: src/repos.cc:673
+#: src/repos.cc:685
 #, c-format, boost-format
 msgid "Repository '%s' not found by its alias, number, or URI."
 msgstr "Kod deposu '%s' takma adı, numarası veya URI'sine göre bulunamadı."
 
-#: src/repos.cc:675
+#: src/repos.cc:687
 #, c-format, boost-format
 msgid "Use '%s' to get the list of defined repositories."
 msgstr "Tanımlı depoların listesi almak için '%s' komutunu kullanın."
 
-#: src/repos.cc:695
+#: src/repos.cc:707
 #, c-format, boost-format
 msgid "Ignoring disabled repository '%s'"
 msgstr "Devre dışı bırakılan kod deposu '%s' yok sayılıyor"
 
-#: src/repos.cc:779
+#: src/repos.cc:791
 #, c-format, boost-format
 msgid "Global option '%s' can be used to temporarily enable repositories."
 msgstr ""
@@ -6190,12 +6202,12 @@ msgstr ""
 "kullanılabilir."
 
 # clients/rc_config_step1.ycp:253
-#: src/repos.cc:795 src/repos.cc:801
+#: src/repos.cc:807 src/repos.cc:813
 #, c-format, boost-format
 msgid "Ignoring repository '%s' because of '%s' option."
 msgstr "'%s' deposu '%s' seçeneğinden dolayı gözardı ediliyor."
 
-#: src/repos.cc:822 src/repos.cc:915
+#: src/repos.cc:834 src/repos.cc:927
 #, c-format, boost-format
 msgid "Temporarily enabling repository '%s'."
 msgstr "'%s' deposu geçici olarak etkinleştiriliyor."
@@ -6203,7 +6215,7 @@ msgstr "'%s' deposu geçici olarak etkinleştiriliyor."
 #. bsc#1235636: Asks to suppress reporting the Exception (usually: No permission to
 #. write repository cache), because it scares. This was was indeed the legacy behavior:
 #. SUPPRESS: zypper.out().error( ex, "Problem" );
-#: src/repos.cc:879
+#: src/repos.cc:891
 #, c-format, boost-format
 msgid ""
 "Repository '%s' is out-of-date. You can run 'zypper refresh' as root to "
@@ -6212,7 +6224,7 @@ msgstr ""
 "'%s' deposu güncel değil. Güncellemek için 'zypper refresh'  komutunu "
 "yönetici olarak çalıştırabilirsiniz."
 
-#: src/repos.cc:896
+#: src/repos.cc:908
 #, c-format, boost-format
 msgid ""
 "The metadata cache needs to be built for the '%s' repository. You can run "
@@ -6221,81 +6233,81 @@ msgstr ""
 "Meta veri önbelleğinin '%s' deposu için oluşturulması gerekiyor. Bunu yapmak "
 "için kök olarak 'zypper refresh' çalıştırabilirsiniz."
 
-#: src/repos.cc:922
+#: src/repos.cc:934
 #, c-format, boost-format
 msgid "Repository '%s' stays disabled."
 msgstr "Depo '%s' devre dışı kalır."
 
-#: src/repos.cc:969
+#: src/repos.cc:981
 msgid "Initializing Target"
 msgstr "Hedef Başlatılıyor"
 
 # clients/online_update_start.ycp:171
-#: src/repos.cc:977
+#: src/repos.cc:989
 msgid "Target initialization failed:"
 msgstr "Hedefin başlatılması başarısız oldu:"
 
-#: src/repos.cc:1059
+#: src/repos.cc:1071
 #, c-format, boost-format
 msgid "Cleaning metadata cache for '%s'."
 msgstr "'%s' için meta veri önbelleği siliniyor."
 
-#: src/repos.cc:1067
+#: src/repos.cc:1079
 #, c-format, boost-format
 msgid "Cleaning raw metadata cache for '%s'."
 msgstr "\"%s\" için ham meta veri önbelleği temizleniyor."
 
-#: src/repos.cc:1073
+#: src/repos.cc:1085
 #, c-format, boost-format
 msgid "Keeping raw metadata cache for %s '%s'."
 msgstr "%s '%s' için ham meta veri önbelleği tutuluyor."
 
 #. translators: meaning the cached rpm files
-#: src/repos.cc:1080
+#: src/repos.cc:1092
 #, c-format, boost-format
 msgid "Cleaning packages for '%s'."
 msgstr "'%s' için pakeler siliniyor."
 
-#: src/repos.cc:1088
+#: src/repos.cc:1100
 #, c-format, boost-format
 msgid "Cannot clean repository '%s' because of an error."
 msgstr "Hatadan dolayı '%s' deposu temizlenemedi."
 
-#: src/repos.cc:1099
+#: src/repos.cc:1111
 msgid "Cleaning installed packages cache."
 msgstr "Yüklü paketlerin ön belleği temizleniyor."
 
-#: src/repos.cc:1108
+#: src/repos.cc:1120
 msgid "Cannot clean installed packages cache because of an error."
 msgstr "Hatadan dolayı yükllenmiş paketler önbelleği silinemedi."
 
-#: src/repos.cc:1126
+#: src/repos.cc:1138
 msgid "Could not clean the repositories because of errors."
 msgstr "Hatadana dolayı depolar silinemedi."
 
-#: src/repos.cc:1132
+#: src/repos.cc:1144
 msgid "Some of the repositories have not been cleaned up because of an error."
 msgstr "Depoların bazıları bir hatadan dolayı temizlenmedi."
 
-#: src/repos.cc:1137
+#: src/repos.cc:1149
 msgid "Specified repositories have been cleaned up."
 msgstr "Belirtilen depolar temizlendi."
 
-#: src/repos.cc:1139
+#: src/repos.cc:1151
 msgid "All repositories have been cleaned up."
 msgstr "Tüm depolar temizlendi."
 
-#: src/repos.cc:1161
+#: src/repos.cc:1173
 msgid "This is a changeable read-only media (CD/DVD), disabling autorefresh."
 msgstr ""
 "Değiitirilebilir ve salt okunur media(CD/DVD), otomatik yenileme devre dışı."
 
-#: src/repos.cc:1182
+#: src/repos.cc:1194
 #, c-format, boost-format
 msgid "Invalid repository alias: '%s'"
 msgstr "Geçersiz kod deposu takma adı: \"%s\""
 
-#: src/repos.cc:1199
+#: src/repos.cc:1211
 msgid ""
 "Could not determine the type of the repository. Please check if the defined "
 "URIs (see below) point to a valid repository:"
@@ -6303,25 +6315,25 @@ msgstr ""
 "Deponun türü belirlenemedi. Lütfen tanımlanan URI'lerin (aşağıya bakın) "
 "geçerli bir depoya işaret edip etmediğini kontrol edin:"
 
-#: src/repos.cc:1205
+#: src/repos.cc:1217
 msgid "Can't find a valid repository at given location:"
 msgstr "Belirtilen yerde geçerli bir depo bulunamadı:"
 
-#: src/repos.cc:1213
+#: src/repos.cc:1225
 msgid "Problem transferring repository data from specified URI:"
 msgstr "Belirtilen URI'dan depo verisi aktarılırken hata oluştu:"
 
-#: src/repos.cc:1214
+#: src/repos.cc:1226
 msgid "Please check whether the specified URI is accessible."
 msgstr "Belirtilen URI'ın erişilebilir olup olmadığını lütfen kontrol edin."
 
-#: src/repos.cc:1221
+#: src/repos.cc:1233
 msgid "Unknown problem when adding repository:"
 msgstr "Depo eklenirken bilinmeyen bir problem oluştu:"
 
 #. translators: BOOST STYLE POSITIONAL DIRECTIVES ( %N% )
 #. translators: %1% - a repository name
-#: src/repos.cc:1231
+#: src/repos.cc:1243
 #, boost-format
 msgid ""
 "GPG checking is disabled in configuration of repository '%1%'. Integrity and "
@@ -6330,138 +6342,138 @@ msgstr ""
 "'%1%' veri havuzunun yapılandırmasında GPG denetimi devre dışı bırakıldı. "
 "Paketlerin bütünlüğü ve menşei doğrulanamıyor."
 
-#: src/repos.cc:1236
+#: src/repos.cc:1248
 #, c-format, boost-format
 msgid "Repository '%s' successfully added"
 msgstr "'%s' deposu başarıyla eklendi"
 
-#: src/repos.cc:1262
+#: src/repos.cc:1274
 #, c-format, boost-format
 msgid "Reading data from '%s' media is delayed until next refresh."
 msgstr "'%s' medyasından veri okumak, bir sonraki yenilemeye kadar ertelenir."
 
-#: src/repos.cc:1267
+#: src/repos.cc:1279
 #, c-format, boost-format
 msgid "Reading data from '%s' media"
 msgstr "'%s' ortamından veri okunuyor"
 
-#: src/repos.cc:1273
+#: src/repos.cc:1285
 #, c-format, boost-format
 msgid "Problem reading data from '%s' media"
 msgstr "'%s' medyasından veri okurken sorun oluştu"
 
-#: src/repos.cc:1274
+#: src/repos.cc:1286
 msgid "Please check if your installation media is valid and readable."
 msgstr ""
 "Lütfen Yükleme medyasının geçerli ve okunabilir olup olmadığını kontrol edin."
 
-#: src/repos.cc:1345
+#: src/repos.cc:1357
 msgid "Problem accessing the file at the specified URI"
 msgstr "Dosyaya belirtilen URI'de erişim sorunu"
 
-#: src/repos.cc:1346
+#: src/repos.cc:1358
 msgid "Please check if the URI is valid and accessible."
 msgstr "Lütfen URI nin geçerli ve erişilebilir olduğunu kontrol edin."
 
-#: src/repos.cc:1353
+#: src/repos.cc:1365
 msgid "Problem parsing the file at the specified URI"
 msgstr "Belirtilen URI'deki dosyanın ayrıştırılmasında sorun oluştu"
 
 #. TranslatorExplanation Don't translate the '.repo' string.
-#: src/repos.cc:1355
+#: src/repos.cc:1367
 msgid "Is it a .repo file?"
 msgstr "Repo dosyası mı?"
 
-#: src/repos.cc:1362
+#: src/repos.cc:1374
 msgid "Problem encountered while trying to read the file at the specified URI"
 msgstr "Dosyayı belirtilen URI'de okumaya çalışırken karşılaşılan sorun"
 
 # clients/rc_config_step1.ycp:253
-#: src/repos.cc:1375
+#: src/repos.cc:1387
 msgid "Repository with no alias defined found in the file, skipping."
 msgstr "Dosyada tanımlı takma adı olmayan depo atlanıyor."
 
 # clients/rc_config_step1.ycp:253
-#: src/repos.cc:1381
+#: src/repos.cc:1393
 #, c-format, boost-format
 msgid "Repository '%s' has no URI defined, skipping."
 msgstr "'%s' kod deposunda tanımlanmış URI yok, atlanıyor."
 
-#: src/repos.cc:1429
+#: src/repos.cc:1441
 #, c-format, boost-format
 msgid "Repository '%s' has been removed."
 msgstr "'%s' deposu kaldırıldı."
 
-#: src/repos.cc:1577
+#: src/repos.cc:1589
 #, c-format, boost-format
 msgid "Repository '%s' priority has been left unchanged (%d)"
 msgstr "'%s' deposunun önceliği değiştirilmeden bırakıldı (%d)"
 
-#: src/repos.cc:1610
+#: src/repos.cc:1622
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully enabled."
 msgstr "'%s' deposu başarıyla etkinleştirildi."
 
-#: src/repos.cc:1612
+#: src/repos.cc:1624
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully disabled."
 msgstr "'%s' deposu başarıyla devre dışı bırakıldı."
 
-#: src/repos.cc:1619
+#: src/repos.cc:1631
 #, c-format, boost-format
 msgid "Autorefresh has been enabled for repository '%s'."
 msgstr "'%s' deposu için otomatik yineleme etkinleştirildi."
 
-#: src/repos.cc:1621
+#: src/repos.cc:1633
 #, c-format, boost-format
 msgid "Autorefresh has been disabled for repository '%s'."
 msgstr "Otomatik yenileme '%s' deposu için devre dışı bırakıldı."
 
-#: src/repos.cc:1628
+#: src/repos.cc:1640
 #, c-format, boost-format
 msgid "RPM files caching has been enabled for repository '%s'."
 msgstr "RPM dosyalarını önbelleğe alma, '%s' deposu için etkinleştirildi."
 
-#: src/repos.cc:1630
+#: src/repos.cc:1642
 #, c-format, boost-format
 msgid "RPM files caching has been disabled for repository '%s'."
 msgstr "RPM dosyalarını önbelleğe alma '%s' deposu için devre dışı bırakıldı."
 
-#: src/repos.cc:1637
+#: src/repos.cc:1649
 #, c-format, boost-format
 msgid "GPG check has been enabled for repository '%s'."
 msgstr "GPG kontrolü '%s' deposu için etkinleştirildi."
 
-#: src/repos.cc:1639
+#: src/repos.cc:1651
 #, c-format, boost-format
 msgid "GPG check has been disabled for repository '%s'."
 msgstr "GPG kontrolü '%s' deposu için devre dışı bırakıldı."
 
-#: src/repos.cc:1645
+#: src/repos.cc:1657
 #, c-format, boost-format
 msgid "Repository '%s' priority has been set to %d."
 msgstr "'%s' deposunun önceliği %d olarak ayarlandı."
 
-#: src/repos.cc:1651
+#: src/repos.cc:1663
 #, c-format, boost-format
 msgid "Name of repository '%s' has been set to '%s'."
 msgstr "'%s' deposunun adı '%s' olarak ayarlandı."
 
-#: src/repos.cc:1662
+#: src/repos.cc:1674
 #, c-format, boost-format
 msgid "Nothing to change for repository '%s'."
 msgstr "'%s' deposu için değiştirilecek bir şey yok."
 
-#: src/repos.cc:1669
+#: src/repos.cc:1681
 #, c-format, boost-format
 msgid "Leaving repository %s unchanged."
 msgstr "%s deposu değiştirilmeden bırakılıyor."
 
-#: src/repos.cc:1756
+#: src/repos.cc:1766
 msgid "Loading repository data..."
 msgstr "Depo bilgisi yükleniyor..."
 
-#: src/repos.cc:1758
+#: src/repos.cc:1768
 msgid ""
 "No repositories defined. Operating only with the installed resolvables. "
 "Nothing can be installed."
@@ -6469,44 +6481,44 @@ msgstr ""
 "Kod deposu tanımlanmadı. Yalnızca kurulu çözümlerle çalışır. Hiçbir şey "
 "yüklenemez."
 
-#: src/repos.cc:1781
+#: src/repos.cc:1791
 #, c-format, boost-format
 msgid "Retrieving repository '%s' data..."
 msgstr "'%s' depo verisi alınıyor."
 
-#: src/repos.cc:1789
+#: src/repos.cc:1799
 #, c-format, boost-format
 msgid "Repository '%s' not cached. Caching..."
 msgstr "Depo '%s' önbelleğe alınmadı. Önbelleğe almak..."
 
-#: src/repos.cc:1795 src/repos.cc:1829
+#: src/repos.cc:1805 src/repos.cc:1839
 #, c-format, boost-format
 msgid "Problem loading data from '%s'"
 msgstr "'%s' üzerinden veri yükleme sorunu"
 
 # clients/rc_config_step1.ycp:253
-#: src/repos.cc:1799
+#: src/repos.cc:1809
 #, c-format, boost-format
 msgid "Repository '%s' could not be refreshed. Using old cache."
 msgstr "'%s' deposu yenilenemedi. Eski ön bellek kullanılıyor."
 
-#: src/repos.cc:1803 src/repos.cc:1832
+#: src/repos.cc:1813 src/repos.cc:1842
 #, c-format, boost-format
 msgid "Resolvables from '%s' not loaded because of error."
 msgstr "Hata nedeniyle '%s'den çözülebilirler yüklenmedi."
 
-#: src/repos.cc:1819
+#: src/repos.cc:1829
 #, boost-format
 msgid "Repository '%1%' metadata expired since %2%."
 msgstr "Depo '%1%' meta verileri %2% tarihinden itibaren sona erdi."
 
 #. translators: the first %s is 'zypper refresh' and the second 'zypper clean -m'
-#: src/repos.cc:1831
+#: src/repos.cc:1841
 #, c-format, boost-format
 msgid "Try '%s', or even '%s' before doing so."
 msgstr "Bunu yapmadan önce '%s', hatta '%s' komutunu deneyin."
 
-#: src/repos.cc:1836
+#: src/repos.cc:1846
 msgid ""
 "Repository metadata expired: Check if 'autorefresh' is turned on (zypper "
 "lr), otherwise manually refresh the repository (zypper ref). If this does "
@@ -6518,30 +6530,30 @@ msgstr ""
 "(zypper ref). Bu sorunu çözmezse, bozuk bir yansı kullanıyor olabilirsiniz "
 "veya sunucu deponun desteğini gerçekten kesmiş olabilir."
 
-#: src/repos.cc:1849
+#: src/repos.cc:1859
 msgid "Reading installed packages..."
 msgstr "Yüklenmiş paketler okunuyor..."
 
-#: src/repos.cc:1858
+#: src/repos.cc:1868
 msgid "Problem occurred while reading the installed packages:"
 msgstr "Yüklü paketleri okurken bir sorun oluştu:"
 
-#: src/repos.cc:1875
+#: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
 msgstr ""
 
-#: src/repos.cc:1884
+#: src/repos.cc:1894
 #, c-format, boost-format
 msgid "Problem with the RPM file specified as '%s', skipping."
 msgstr "RPM dosyasıyla ilgili sorun '%s' olarak belirtildi, atlanıyor."
 
-#: src/repos.cc:1906
+#: src/repos.cc:1916
 #, c-format, boost-format
 msgid "Problem reading the RPM header of %s. Is it an RPM file?"
 msgstr "%s için RPM üstbilgisini okuma sorunu. RPM dosyası mı?"
 
-#: src/repos.cc:1926
+#: src/repos.cc:1936
 msgid "Plain RPM files cache"
 msgstr "Düz RPM dosyaları önbelleği"
 
@@ -6723,8 +6735,8 @@ msgstr ""
 #: src/solve-commit.cc:620
 #, c-format, boost-format
 msgid ""
-"Check for running processes using deleted libraries is disabled in "
-"zypper.conf. Run '%s' to check manually."
+"Check for running processes using deleted libraries is disabled in zypper."
+"conf. Run '%s' to check manually."
 msgstr ""
 "Silinen kitaplıkları kullanan çalışan işlemleri denetleme, zypper.conf "
 "içinde devre dışı bırakılmıştır. Manuel olarak kontrol etmek için '%s' "
@@ -6920,7 +6932,7 @@ msgid "Dependencies of all installed packages are satisfied."
 msgstr "Yüklü paketlerin tamamının bağımlılıkları sağlanmış."
 
 #. translator: stats table header (plural number is %2%)
-#: src/update.cc:336
+#: src/update.cc:359
 #, boost-format
 msgid "Considering %1% out of %2% applicable patches:"
 msgid_plural "Considering %1% out of %2% applicable patches:"
@@ -6928,7 +6940,7 @@ msgstr[0] "%2% uygulanabilir yamanın %1% 'i dikkate alındığında:"
 msgstr[1] "%2% uygulanabilir yamanın %1% 'i dikkate alındığında:"
 
 #. translator: stats table header
-#: src/update.cc:340
+#: src/update.cc:363
 #, boost-format
 msgid "Found %1% applicable patch:"
 msgid_plural "Found %1% applicable patches:"
@@ -6937,7 +6949,7 @@ msgstr[1] "%1% uygulanabilir yama bulundu:"
 
 # clients/inst_rootpart.ycp:401
 #. translator: stats summary
-#: src/update.cc:350
+#: src/update.cc:373
 #, c-format, boost-format
 msgid "%d patch locked"
 msgid_plural "%d patches locked"
@@ -6946,7 +6958,7 @@ msgstr[1] "%d yama kilitli"
 
 # clients/inst_rootpart.ycp:401
 #. translator: stats summary
-#: src/update.cc:358
+#: src/update.cc:381
 #, c-format, boost-format
 msgid "%d patch optional"
 msgid_plural "%d patches optional"
@@ -6955,14 +6967,14 @@ msgstr[1] "%d yama isteğe bağlı"
 
 #. translator: Hint displayed right adjusted; %1% is a CLI option
 #. "42 patches optional                  (use --with-optional to include optional patches)"
-#: src/update.cc:362
+#: src/update.cc:385
 #, boost-format
 msgid "use '%1%' to include optional patches"
 msgstr "isteğe bağlı yamaları dahil etmek için '%1%' seçeneğini kullanın"
 
 # clients/inst_rootpart.ycp:401
 #. translator: stats summary
-#: src/update.cc:371
+#: src/update.cc:394
 #, c-format, boost-format
 msgid "%d patch needed"
 msgid_plural "%d patches needed"
@@ -6970,7 +6982,7 @@ msgstr[0] "%d yama gerekli"
 msgstr[1] "%d yama gerekli"
 
 #. translator: stats summary
-#: src/update.cc:374
+#: src/update.cc:397
 #, c-format, boost-format
 msgid "%d security patch"
 msgid_plural "%d security patches"
@@ -6978,18 +6990,18 @@ msgstr[0] "%d güvenlik yaması"
 msgstr[1] "%d güvenlik yaması"
 
 #. translator: Table column header.
-#: src/update.cc:408
+#: src/update.cc:431
 msgid "Updatestack"
 msgstr "Yığını Güncelle"
 
 # clients/online_update_details.ycp:88 clients/online_update_select.ycp:112
 #. translator: Table column header.
-#: src/update.cc:410 src/update.cc:702
+#: src/update.cc:433 src/update.cc:732
 msgid "Patches"
 msgstr "Yamalar"
 
 #. translator: Table column header.
-#: src/update.cc:412
+#: src/update.cc:435
 msgid "Locked"
 msgstr "Kilitli"
 
@@ -6998,75 +7010,75 @@ msgstr "Kilitli"
 #. Category    | Updatestack | Patches | Locked | Included categories
 #. ------------+-------------+---------+--------+---------------------
 #. optional   | ...                      ..... | enhancement, feature
-#: src/update.cc:418
+#: src/update.cc:441
 msgid "Included categories"
 msgstr "Dahili kategoriler"
 
 #. translator: Table headline; 'Needed' refers to patches with status 'needed'
-#: src/update.cc:592
+#: src/update.cc:622
 msgid "Needed software management updates will be installed first:"
 msgstr "Önce gerekli yazılım yöneticisi güncellemeleri yüklenecek:"
 
 # clients/inst_rootpart.ycp:401
-#: src/update.cc:600 src/update.cc:842
+#: src/update.cc:630 src/update.cc:877
 msgid "No updates found."
 msgstr "Güncelleme bulunamadı."
 
 #. translator: Table headline
-#: src/update.cc:607
+#: src/update.cc:637
 msgid "The following updates are also available:"
 msgstr "Aşağıdaki güncellemeler de mevcuttur:"
 
 # clients/inst_sw_single.ycp:1461 clients/inst_sw_single.ycp:1485
-#: src/update.cc:700
+#: src/update.cc:730
 msgid "Package updates"
 msgstr "Paket güncellemeleri"
 
 # clients/inst_sw_single.ycp:1623
-#: src/update.cc:704
+#: src/update.cc:734
 msgid "Pattern updates"
 msgstr "Örüntü güncellemeleri"
 
 # clients/inst_sw_single.ycp:1623
-#: src/update.cc:706
+#: src/update.cc:736
 msgid "Product updates"
 msgstr "Ürün güncellemeleri"
 
-#: src/update.cc:794
+#: src/update.cc:824
 msgid "Current Version"
 msgstr "Şimdiki Sürüm"
 
 # include/ui/wizard_hw.ycp:48
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Available Version"
 msgstr "Mevcut Sürüm"
 
 # clients/inst_rootpart.ycp:401
-#: src/update.cc:972
+#: src/update.cc:1007
 msgid "No matching issues found."
 msgstr "Eşleşen sorun bulunamadı."
 
-#: src/update.cc:978
+#: src/update.cc:1013
 msgid "The following matches in issue numbers have been found:"
 msgstr "Sayı numaralarında aşağıdaki eşleşmeler bulundu:"
 
-#: src/update.cc:988
+#: src/update.cc:1023
 msgid "Matches in patch descriptions of the following patches have been found:"
 msgstr "Aşağıdaki yamaların yama açıklamalarındaki eşleşmeler bulundu:"
 
-#: src/update.cc:1050
+#: src/update.cc:1085
 #, c-format, boost-format
 msgid "Fix for bugzilla issue number %s was not found or is not needed."
 msgstr ""
 "%s numaralı bugzilla sorunu için düzeltme bulunamadı veya gerekli değil."
 
-#: src/update.cc:1052
+#: src/update.cc:1087
 #, c-format, boost-format
 msgid "Fix for CVE issue number %s was not found or is not needed."
 msgstr "%s numaralı CVE sorunu için düzeltme bulunamadı veya gerekli değil."
 
 #. translators: keep '%s issue' together, it's something like 'CVE issue' or 'Bugzilla issue'
-#: src/update.cc:1055
+#: src/update.cc:1090
 #, c-format, boost-format
 msgid "Fix for %s issue number %s was not found or is not needed."
 msgstr "%s sorun numarası için düzeltme %s bulunamadı veya gerekli değil."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 12:49+0100\n"
+"POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2025-07-22 12:47+0000\n"
 "Last-Translator: Julia Faltenbacher <julia.faltenbacher@suse.com>\n"
 "Language-Team: Afrikaans <https://l10n.opensuse.org/projects/zypper/master/"
@@ -2433,6 +2433,23 @@ msgid ""
 "they are installable or not."
 msgstr ""
 
+#: src/commands/listupdates.cc:48 src/commands/solveroptionset.cc:24
+#, boost-format
+msgid "Valid values: %1%"
+msgstr ""
+
+#: src/commands/listupdates.cc:50
+msgid "LEVEL"
+msgstr ""
+
+#. translators: --filter-version-change
+#: src/commands/listupdates.cc:53
+msgid ""
+"Filter updates by version change significance. LEVEL: 'none' (default, show "
+"all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
+"changes, i.e. same upstream version)."
+msgstr ""
+
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
 msgid "addlocale (aloc) [OPTIONS] <LOCALE> ..."
@@ -2608,7 +2625,7 @@ msgstr[1] ""
 #: src/commands/repos/list.cc:236 src/commands/services/list.cc:91
 #: src/commands/services/list.cc:161 src/info.cc:92 src/info.cc:718
 #: src/info.cc:937 src/locales.cc:201 src/search.cc:48 src/search.cc:199
-#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:789
+#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:819
 #: src/utils/misc.cc:324
 msgid "Name"
 msgstr "Naam"
@@ -2629,7 +2646,7 @@ msgstr "Soort"
 #. translators: property name; short; used like "Name: value"
 #. translators: package's repository (header)
 #: src/commands/locks/list.cc:136 src/info.cc:90 src/search.cc:56
-#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:786
+#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:816
 #: src/utils/misc.cc:323
 #, fuzzy
 msgid "Repository"
@@ -3434,7 +3451,7 @@ msgstr ""
 #. translator: Option argument like '--export <FILE.repo>'. Do do not translate lowercase wordparts
 #: src/commands/repos/list.cc:51 src/commands/repos/list.cc:54
 #: src/commands/repos/list.cc:292 src/commands/services/add.cc:96
-#: src/commands/services/list.cc:172 src/repos.cc:1242
+#: src/commands/services/list.cc:172 src/repos.cc:1254
 #: src/utils/flags/zyppflags.h:49
 msgid "URI"
 msgstr ""
@@ -3443,14 +3460,14 @@ msgstr ""
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:58 src/commands/repos/list.cc:244
 #: src/commands/services/add.cc:98 src/commands/services/list.cc:92
-#: src/commands/services/list.cc:162 src/repos.cc:1244
+#: src/commands/services/list.cc:162 src/repos.cc:1256
 msgid "Enabled"
 msgstr "Ontsper"
 
 #. GPG Check
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:59 src/commands/repos/list.cc:248
-#: src/commands/services/list.cc:163 src/repos.cc:1246
+#: src/commands/services/list.cc:163 src/repos.cc:1258
 #, fuzzy
 msgid "GPG Check"
 msgstr "DNS-nagaan"
@@ -3458,13 +3475,13 @@ msgstr "DNS-nagaan"
 #. translators: repository priority (in zypper repos -p or -d)
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:60 src/commands/repos/list.cc:276
-#: src/commands/services/list.cc:169 src/repos.cc:1250
+#: src/commands/services/list.cc:169 src/repos.cc:1262
 msgid "Priority"
 msgstr ""
 
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:61 src/commands/services/add.cc:100
-#: src/commands/services/list.cc:93 src/repos.cc:1248
+#: src/commands/services/list.cc:93 src/repos.cc:1260
 #, fuzzy
 msgid "Autorefresh"
 msgstr "Outovernuwe"
@@ -3524,7 +3541,7 @@ msgstr ""
 msgid "Export all defined repositories as a single local .repo file."
 msgstr ""
 
-#: src/commands/repos/list.cc:129 src/repos.cc:999
+#: src/commands/repos/list.cc:129 src/repos.cc:1011
 #, fuzzy
 msgid "Error reading repositories:"
 msgstr "Fout in die skryf van lêer '%1'"
@@ -3666,7 +3683,7 @@ msgstr ""
 msgid "Arguments are not allowed if '%s' is used."
 msgstr ""
 
-#: src/commands/repos/refresh.cc:241 src/repos.cc:1011
+#: src/commands/repos/refresh.cc:241 src/repos.cc:1023
 #, fuzzy
 msgid "Specified repositories: "
 msgstr "Fout in die skryf van lêer '%1'"
@@ -3676,7 +3693,7 @@ msgstr "Fout in die skryf van lêer '%1'"
 msgid "Refreshing repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/commands/repos/refresh.cc:282 src/repos.cc:836
+#: src/commands/repos/refresh.cc:282 src/repos.cc:848
 #, fuzzy, c-format, boost-format
 msgid "Scanning content of disabled repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
@@ -3686,7 +3703,7 @@ msgstr "Fout in die skryf van lêer '%1'"
 msgid "Skipping disabled repository '%s'"
 msgstr ""
 
-#: src/commands/repos/refresh.cc:308 src/repos.cc:854 src/repos.cc:901
+#: src/commands/repos/refresh.cc:308 src/repos.cc:866 src/repos.cc:913
 #, c-format, boost-format
 msgid "Skipping repository '%s' because of the above error."
 msgstr ""
@@ -3715,7 +3732,7 @@ msgstr ""
 msgid "Could not refresh the repositories because of errors."
 msgstr ""
 
-#: src/commands/repos/refresh.cc:344 src/repos.cc:930
+#: src/commands/repos/refresh.cc:344 src/repos.cc:942
 msgid "Some of the repositories have not been refreshed because of an error."
 msgstr ""
 
@@ -3768,12 +3785,12 @@ msgstr ""
 msgid "Repository '%s' renamed to '%s'."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/commands/repos/rename.cc:47 src/repos.cc:1190
+#: src/commands/repos/rename.cc:47 src/repos.cc:1202
 #, c-format, boost-format
 msgid "Repository named '%s' already exists. Please use another alias."
 msgstr ""
 
-#: src/commands/repos/rename.cc:52 src/repos.cc:1668
+#: src/commands/repos/rename.cc:52 src/repos.cc:1680
 #, fuzzy
 msgid "Error while modifying the repository:"
 msgstr "'n Fout het voorgekom terwyl die opgawe gelees is."
@@ -4206,7 +4223,7 @@ msgid ""
 "(useful for search in dependencies)."
 msgstr ""
 
-#: src/commands/search/search.cc:298 src/repos.cc:773
+#: src/commands/search/search.cc:298 src/repos.cc:785
 #, fuzzy, c-format, boost-format
 msgid "Specified repository '%s' is disabled."
 msgstr "Outovernuwe"
@@ -4226,7 +4243,7 @@ msgstr ""
 msgid "See the above message for a hint."
 msgstr "Maak asseblief die fout reg en probeer weer."
 
-#: src/commands/search/search.cc:505 src/repos.cc:978
+#: src/commands/search/search.cc:505 src/repos.cc:990
 msgid "Running 'zypper refresh' as root might resolve the problem."
 msgstr ""
 
@@ -4327,7 +4344,7 @@ msgid "Problem retrieving the repository index file for service '%s':"
 msgstr "Fout in die skryf van lêer '%1'"
 
 #: src/commands/services/common.cc:195 src/commands/services/refresh.cc:159
-#: src/repos.cc:1720
+#: src/repos.cc:1730
 #, c-format, boost-format
 msgid "Skipping service '%s' because of the above error."
 msgstr ""
@@ -4624,11 +4641,6 @@ msgstr ""
 
 #: src/commands/shell.cc:74
 msgid "This command only makes sense in the zypper shell."
-msgstr ""
-
-#: src/commands/solveroptionset.cc:24
-#, boost-format
-msgid "Valid values: %1%"
 msgstr ""
 
 #: src/commands/solveroptionset.cc:36 src/commands/solveroptionset.cc:59
@@ -5259,7 +5271,7 @@ msgstr "Weergawe"
 #. translators: property name; short; used like "Name: value"
 #. translators: package architecture (header)
 #: src/info.cc:96 src/search.cc:54 src/search.cc:460 src/search.cc:510
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Arch"
 msgstr "Arg."
 
@@ -5355,7 +5367,7 @@ msgstr ""
 #. translators: property name; short; used like "Name: value"
 #. translator: Table column header.
 #. Name
-#: src/info.cc:501 src/update.cc:406 src/utils/misc.cc:325
+#: src/info.cc:501 src/update.cc:429 src/utils/misc.cc:325
 #: src/utils/misc.cc:367
 msgid "Category"
 msgstr "Kategorie"
@@ -5419,7 +5431,7 @@ msgstr ""
 #. TranslatorExplanation S stands for Status
 #: src/info.cc:717 src/info.cc:936 src/locales.cc:199 src/search.cc:46
 #: src/search.cc:198 src/search.cc:303 src/search.cc:456 src/search.cc:503
-#: src/update.cc:784
+#: src/update.cc:814
 msgid "S"
 msgstr "S"
 
@@ -5757,7 +5769,7 @@ msgstr "Fout in die skryf van lêer '%1'"
 msgid "Problem retrieving files from '%s'."
 msgstr "Lees van lêerlys vanaf %s"
 
-#: src/repos.cc:341 src/repos.cc:1859 src/solve-commit.cc:990
+#: src/repos.cc:341 src/repos.cc:1869 src/solve-commit.cc:990
 #: src/solve-commit.cc:1022 src/solve-commit.cc:1046
 #, fuzzy
 msgid "Please see the above error message for a hint."
@@ -5826,32 +5838,32 @@ msgstr "Diens is nie aan die loop nie"
 msgid "Error building the cache:"
 msgstr "Fout tydens ontleding van die sertifikaat."
 
-#: src/repos.cc:673
+#: src/repos.cc:685
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' not found by its alias, number, or URI."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:675
+#: src/repos.cc:687
 #, c-format, boost-format
 msgid "Use '%s' to get the list of defined repositories."
 msgstr ""
 
-#: src/repos.cc:695
+#: src/repos.cc:707
 #, fuzzy, c-format, boost-format
 msgid "Ignoring disabled repository '%s'"
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:779
+#: src/repos.cc:791
 #, c-format, boost-format
 msgid "Global option '%s' can be used to temporarily enable repositories."
 msgstr ""
 
-#: src/repos.cc:795 src/repos.cc:801
+#: src/repos.cc:807 src/repos.cc:813
 #, fuzzy, c-format, boost-format
 msgid "Ignoring repository '%s' because of '%s' option."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:822 src/repos.cc:915
+#: src/repos.cc:834 src/repos.cc:927
 #, fuzzy, c-format, boost-format
 msgid "Temporarily enabling repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
@@ -5859,267 +5871,267 @@ msgstr "Fout in die skryf van lêer '%1'"
 #. bsc#1235636: Asks to suppress reporting the Exception (usually: No permission to
 #. write repository cache), because it scares. This was was indeed the legacy behavior:
 #. SUPPRESS: zypper.out().error( ex, "Problem" );
-#: src/repos.cc:879
+#: src/repos.cc:891
 #, c-format, boost-format
 msgid ""
 "Repository '%s' is out-of-date. You can run 'zypper refresh' as root to "
 "update it."
 msgstr ""
 
-#: src/repos.cc:896
+#: src/repos.cc:908
 #, c-format, boost-format
 msgid ""
 "The metadata cache needs to be built for the '%s' repository. You can run "
 "'zypper refresh' as root to do this."
 msgstr ""
 
-#: src/repos.cc:922
+#: src/repos.cc:934
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' stays disabled."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:969
+#: src/repos.cc:981
 msgid "Initializing Target"
 msgstr "Inisialiseer van Teiken"
 
-#: src/repos.cc:977
+#: src/repos.cc:989
 #, fuzzy
 msgid "Target initialization failed:"
 msgstr "Inisialisasie het misluk"
 
-#: src/repos.cc:1059
+#: src/repos.cc:1071
 #, fuzzy, c-format, boost-format
 msgid "Cleaning metadata cache for '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1067
+#: src/repos.cc:1079
 #, fuzzy, c-format, boost-format
 msgid "Cleaning raw metadata cache for '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1073
+#: src/repos.cc:1085
 #, fuzzy, c-format, boost-format
 msgid "Keeping raw metadata cache for %s '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
 #. translators: meaning the cached rpm files
-#: src/repos.cc:1080
+#: src/repos.cc:1092
 #, fuzzy, c-format, boost-format
 msgid "Cleaning packages for '%s'."
 msgstr "Lees van pakkette vanaf %s"
 
-#: src/repos.cc:1088
+#: src/repos.cc:1100
 #, c-format, boost-format
 msgid "Cannot clean repository '%s' because of an error."
 msgstr ""
 
-#: src/repos.cc:1099
+#: src/repos.cc:1111
 #, fuzzy
 msgid "Cleaning installed packages cache."
 msgstr "Nagaan van geïnstalleerde RPM-pakkette ..."
 
-#: src/repos.cc:1108
+#: src/repos.cc:1120
 #, fuzzy
 msgid "Cannot clean installed packages cache because of an error."
 msgstr "kon hulpbronne nie kopieer nie (databasisfout)"
 
-#: src/repos.cc:1126
+#: src/repos.cc:1138
 #, fuzzy
 msgid "Could not clean the repositories because of errors."
 msgstr "kon hulpbronne nie kopieer nie (databasisfout)"
 
-#: src/repos.cc:1132
+#: src/repos.cc:1144
 msgid "Some of the repositories have not been cleaned up because of an error."
 msgstr ""
 
-#: src/repos.cc:1137
+#: src/repos.cc:1149
 #, fuzzy
 msgid "Specified repositories have been cleaned up."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1139
+#: src/repos.cc:1151
 #, fuzzy
 msgid "All repositories have been cleaned up."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1161
+#: src/repos.cc:1173
 msgid "This is a changeable read-only media (CD/DVD), disabling autorefresh."
 msgstr ""
 
-#: src/repos.cc:1182
+#: src/repos.cc:1194
 #, fuzzy, c-format, boost-format
 msgid "Invalid repository alias: '%s'"
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1199
+#: src/repos.cc:1211
 msgid ""
 "Could not determine the type of the repository. Please check if the defined "
 "URIs (see below) point to a valid repository:"
 msgstr ""
 
-#: src/repos.cc:1205
+#: src/repos.cc:1217
 msgid "Can't find a valid repository at given location:"
 msgstr ""
 
-#: src/repos.cc:1213
+#: src/repos.cc:1225
 #, fuzzy
 msgid "Problem transferring repository data from specified URI:"
 msgstr "Waarskuwing: Onbekende metadatasoort"
 
-#: src/repos.cc:1214
+#: src/repos.cc:1226
 #, fuzzy
 msgid "Please check whether the specified URI is accessible."
 msgstr "skriplêer is ontoeganklik"
 
-#: src/repos.cc:1221
+#: src/repos.cc:1233
 #, fuzzy
 msgid "Unknown problem when adding repository:"
 msgstr "Waarskuwing: Onbekende metadatasoort"
 
 #. translators: BOOST STYLE POSITIONAL DIRECTIVES ( %N% )
 #. translators: %1% - a repository name
-#: src/repos.cc:1231
+#: src/repos.cc:1243
 #, boost-format
 msgid ""
 "GPG checking is disabled in configuration of repository '%1%'. Integrity and "
 "origin of packages cannot be verified."
 msgstr ""
 
-#: src/repos.cc:1236
+#: src/repos.cc:1248
 #, c-format, boost-format
 msgid "Repository '%s' successfully added"
 msgstr ""
 
-#: src/repos.cc:1262
+#: src/repos.cc:1274
 #, fuzzy, c-format, boost-format
 msgid "Reading data from '%s' media is delayed until next refresh."
 msgstr "Lees van produk vanaf %s"
 
-#: src/repos.cc:1267
+#: src/repos.cc:1279
 #, fuzzy, c-format, boost-format
 msgid "Reading data from '%s' media"
 msgstr "Lees van produk vanaf %s"
 
-#: src/repos.cc:1273
+#: src/repos.cc:1285
 #, c-format, boost-format
 msgid "Problem reading data from '%s' media"
 msgstr ""
 
-#: src/repos.cc:1274
+#: src/repos.cc:1286
 msgid "Please check if your installation media is valid and readable."
 msgstr ""
 
-#: src/repos.cc:1345
+#: src/repos.cc:1357
 #, fuzzy
 msgid "Problem accessing the file at the specified URI"
 msgstr "Waarskuwing: Onbekende metadatasoort"
 
-#: src/repos.cc:1346
+#: src/repos.cc:1358
 #, fuzzy
 msgid "Please check if the URI is valid and accessible."
 msgstr "skriplêer is ontoeganklik"
 
-#: src/repos.cc:1353
+#: src/repos.cc:1365
 #, fuzzy
 msgid "Problem parsing the file at the specified URI"
 msgstr "Waarskuwing: Onbekende metadatasoort"
 
 #. TranslatorExplanation Don't translate the '.repo' string.
-#: src/repos.cc:1355
+#: src/repos.cc:1367
 msgid "Is it a .repo file?"
 msgstr ""
 
-#: src/repos.cc:1362
+#: src/repos.cc:1374
 #, fuzzy
 msgid "Problem encountered while trying to read the file at the specified URI"
 msgstr "Waarskuwing: Onbekende metadatasoort"
 
-#: src/repos.cc:1375
+#: src/repos.cc:1387
 #, fuzzy
 msgid "Repository with no alias defined found in the file, skipping."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1381
+#: src/repos.cc:1393
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' has no URI defined, skipping."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1429
+#: src/repos.cc:1441
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' has been removed."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1577
+#: src/repos.cc:1589
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' priority has been left unchanged (%d)"
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1610
+#: src/repos.cc:1622
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' has been successfully enabled."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1612
+#: src/repos.cc:1624
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' has been successfully disabled."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1619
+#: src/repos.cc:1631
 #, c-format, boost-format
 msgid "Autorefresh has been enabled for repository '%s'."
 msgstr ""
 
-#: src/repos.cc:1621
+#: src/repos.cc:1633
 #, c-format, boost-format
 msgid "Autorefresh has been disabled for repository '%s'."
 msgstr ""
 
-#: src/repos.cc:1628
+#: src/repos.cc:1640
 #, fuzzy, c-format, boost-format
 msgid "RPM files caching has been enabled for repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1630
+#: src/repos.cc:1642
 #, fuzzy, c-format, boost-format
 msgid "RPM files caching has been disabled for repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1637
+#: src/repos.cc:1649
 #, fuzzy, c-format, boost-format
 msgid "GPG check has been enabled for repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1639
+#: src/repos.cc:1651
 #, fuzzy, c-format, boost-format
 msgid "GPG check has been disabled for repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1645
+#: src/repos.cc:1657
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' priority has been set to %d."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1651
+#: src/repos.cc:1663
 #, fuzzy, c-format, boost-format
 msgid "Name of repository '%s' has been set to '%s'."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1662
+#: src/repos.cc:1674
 #, fuzzy, c-format, boost-format
 msgid "Nothing to change for repository '%s'."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1669
+#: src/repos.cc:1681
 #, fuzzy, c-format, boost-format
 msgid "Leaving repository %s unchanged."
 msgstr "Waarskuwing: Onbekende metadatasoort"
 
-#: src/repos.cc:1756
+#: src/repos.cc:1766
 #, fuzzy
 msgid "Loading repository data..."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1758
+#: src/repos.cc:1768
 #, fuzzy
 msgid ""
 "No repositories defined. Operating only with the installed resolvables. "
@@ -6128,43 +6140,43 @@ msgstr ""
 "Waarskuwing: Geen bronne nie. Werk slegs met die geïnstalleerde oplossings. "
 "Niks kan geïnstalleer word nie."
 
-#: src/repos.cc:1781
+#: src/repos.cc:1791
 #, fuzzy, c-format, boost-format
 msgid "Retrieving repository '%s' data..."
 msgstr "Fout in die skryf van lêer '%1'"
 
-#: src/repos.cc:1789
+#: src/repos.cc:1799
 #, c-format, boost-format
 msgid "Repository '%s' not cached. Caching..."
 msgstr ""
 
-#: src/repos.cc:1795 src/repos.cc:1829
+#: src/repos.cc:1805 src/repos.cc:1839
 #, c-format, boost-format
 msgid "Problem loading data from '%s'"
 msgstr ""
 
-#: src/repos.cc:1799
+#: src/repos.cc:1809
 #, fuzzy, c-format, boost-format
 msgid "Repository '%s' could not be refreshed. Using old cache."
 msgstr "Diens is nie aan die loop nie"
 
-#: src/repos.cc:1803 src/repos.cc:1832
+#: src/repos.cc:1813 src/repos.cc:1842
 #, c-format, boost-format
 msgid "Resolvables from '%s' not loaded because of error."
 msgstr ""
 
-#: src/repos.cc:1819
+#: src/repos.cc:1829
 #, boost-format
 msgid "Repository '%1%' metadata expired since %2%."
 msgstr ""
 
 #. translators: the first %s is 'zypper refresh' and the second 'zypper clean -m'
-#: src/repos.cc:1831
+#: src/repos.cc:1841
 #, c-format, boost-format
 msgid "Try '%s', or even '%s' before doing so."
 msgstr ""
 
-#: src/repos.cc:1836
+#: src/repos.cc:1846
 msgid ""
 "Repository metadata expired: Check if 'autorefresh' is turned on (zypper "
 "lr), otherwise manually refresh the repository (zypper ref). If this does "
@@ -6172,32 +6184,32 @@ msgid ""
 "server has actually discontinued to support the repository."
 msgstr ""
 
-#: src/repos.cc:1849
+#: src/repos.cc:1859
 #, fuzzy
 msgid "Reading installed packages..."
 msgstr "Nagaan van geïnstalleerde RPM-pakkette ..."
 
-#: src/repos.cc:1858
+#: src/repos.cc:1868
 #, fuzzy
 msgid "Problem occurred while reading the installed packages:"
 msgstr "’n Fout het voorgekom tydens lees vanaf die installasiebron."
 
-#: src/repos.cc:1875
+#: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
 msgstr ""
 
-#: src/repos.cc:1884
+#: src/repos.cc:1894
 #, c-format, boost-format
 msgid "Problem with the RPM file specified as '%s', skipping."
 msgstr ""
 
-#: src/repos.cc:1906
+#: src/repos.cc:1916
 #, c-format, boost-format
 msgid "Problem reading the RPM header of %s. Is it an RPM file?"
 msgstr ""
 
-#: src/repos.cc:1926
+#: src/repos.cc:1936
 msgid "Plain RPM files cache"
 msgstr ""
 
@@ -6375,8 +6387,8 @@ msgstr ""
 #: src/solve-commit.cc:620
 #, c-format, boost-format
 msgid ""
-"Check for running processes using deleted libraries is disabled in "
-"zypper.conf. Run '%s' to check manually."
+"Check for running processes using deleted libraries is disabled in zypper."
+"conf. Run '%s' to check manually."
 msgstr ""
 
 #: src/solve-commit.cc:636
@@ -6557,7 +6569,7 @@ msgid "Dependencies of all installed packages are satisfied."
 msgstr ""
 
 #. translator: stats table header (plural number is %2%)
-#: src/update.cc:336
+#: src/update.cc:359
 #, boost-format
 msgid "Considering %1% out of %2% applicable patches:"
 msgid_plural "Considering %1% out of %2% applicable patches:"
@@ -6565,7 +6577,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translator: stats table header
-#: src/update.cc:340
+#: src/update.cc:363
 #, boost-format
 msgid "Found %1% applicable patch:"
 msgid_plural "Found %1% applicable patches:"
@@ -6573,7 +6585,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translator: stats summary
-#: src/update.cc:350
+#: src/update.cc:373
 #, c-format, boost-format
 msgid "%d patch locked"
 msgid_plural "%d patches locked"
@@ -6581,7 +6593,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translator: stats summary
-#: src/update.cc:358
+#: src/update.cc:381
 #, c-format, boost-format
 msgid "%d patch optional"
 msgid_plural "%d patches optional"
@@ -6590,13 +6602,13 @@ msgstr[1] ""
 
 #. translator: Hint displayed right adjusted; %1% is a CLI option
 #. "42 patches optional                  (use --with-optional to include optional patches)"
-#: src/update.cc:362
+#: src/update.cc:385
 #, boost-format
 msgid "use '%1%' to include optional patches"
 msgstr ""
 
 #. translator: stats summary
-#: src/update.cc:371
+#: src/update.cc:394
 #, c-format, boost-format
 msgid "%d patch needed"
 msgid_plural "%d patches needed"
@@ -6604,7 +6616,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translator: stats summary
-#: src/update.cc:374
+#: src/update.cc:397
 #, c-format, boost-format
 msgid "%d security patch"
 msgid_plural "%d security patches"
@@ -6612,18 +6624,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translator: Table column header.
-#: src/update.cc:408
+#: src/update.cc:431
 msgid "Updatestack"
 msgstr ""
 
 #. translator: Table column header.
-#: src/update.cc:410 src/update.cc:702
+#: src/update.cc:433 src/update.cc:732
 #, fuzzy
 msgid "Patches"
 msgstr "regstelling"
 
 #. translator: Table column header.
-#: src/update.cc:412
+#: src/update.cc:435
 msgid "Locked"
 msgstr ""
 
@@ -6632,77 +6644,77 @@ msgstr ""
 #. Category    | Updatestack | Patches | Locked | Included categories
 #. ------------+-------------+---------+--------+---------------------
 #. optional   | ...                      ..... | enhancement, feature
-#: src/update.cc:418
+#: src/update.cc:441
 msgid "Included categories"
 msgstr ""
 
 #. translator: Table headline; 'Needed' refers to patches with status 'needed'
-#: src/update.cc:592
+#: src/update.cc:622
 #, fuzzy
 msgid "Needed software management updates will be installed first:"
 msgstr "Hierdie pakkette moet geïnstalleer word:"
 
-#: src/update.cc:600 src/update.cc:842
+#: src/update.cc:630 src/update.cc:877
 #, fuzzy
 msgid "No updates found."
 msgstr "Geen klank nie"
 
 #. translator: Table headline
-#: src/update.cc:607
+#: src/update.cc:637
 #, fuzzy
 msgid "The following updates are also available:"
 msgstr "Die volgende hulpbronne word verander"
 
-#: src/update.cc:700
+#: src/update.cc:730
 msgid "Package updates"
 msgstr ""
 
-#: src/update.cc:704
+#: src/update.cc:734
 #, fuzzy
 msgid "Pattern updates"
 msgstr "Batterystatus"
 
-#: src/update.cc:706
+#: src/update.cc:736
 #, fuzzy
 msgid "Product updates"
 msgstr "Produk"
 
-#: src/update.cc:794
+#: src/update.cc:824
 #, fuzzy
 msgid "Current Version"
 msgstr "Huidige verbinding"
 
-#: src/update.cc:795
+#: src/update.cc:825
 #, fuzzy
 msgid "Available Version"
 msgstr "Beskikbare geheue"
 
-#: src/update.cc:972
+#: src/update.cc:1007
 #, fuzzy
 msgid "No matching issues found."
 msgstr "Geen klank nie"
 
-#: src/update.cc:978
+#: src/update.cc:1013
 #, fuzzy
 msgid "The following matches in issue numbers have been found:"
 msgstr "Hierdie pakkette moet geïnstalleer word:"
 
-#: src/update.cc:988
+#: src/update.cc:1023
 msgid "Matches in patch descriptions of the following patches have been found:"
 msgstr ""
 
-#: src/update.cc:1050
+#: src/update.cc:1085
 #, c-format, boost-format
 msgid "Fix for bugzilla issue number %s was not found or is not needed."
 msgstr ""
 
-#: src/update.cc:1052
+#: src/update.cc:1087
 #, c-format, boost-format
 msgid "Fix for CVE issue number %s was not found or is not needed."
 msgstr ""
 
 #. translators: keep '%s issue' together, it's something like 'CVE issue' or 'Bugzilla issue'
-#: src/update.cc:1055
+#: src/update.cc:1090
 #, c-format, boost-format
 msgid "Fix for %s issue number %s was not found or is not needed."
 msgstr ""

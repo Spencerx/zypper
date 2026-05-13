@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 12:49+0100\n"
+"POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2026-03-24 17:04+0000\n"
 "Last-Translator: Peter Andreasen <noesgaard@gmail.com>\n"
-"Language-Team: Danish <https://l10n.opensuse.org/projects/zypper/master/da/>"
-"\n"
+"Language-Team: Danish <https://l10n.opensuse.org/projects/zypper/master/da/"
+">\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2360,8 +2360,8 @@ msgid ""
 "added e.g. new hardware or driver repos."
 msgstr ""
 "Kaldt som '%1%', begrænser det kommandoen til kun at lede efter pakker som "
-"understøtter tilgængelig hardware, sprog eller filsystemer. Nyttig efter "
-"f.eks. at have tilføjet ny hardware- eller driver-softwarekilder."
+"understøtter tilgængelig hardware, sprog eller filsystemer. Nyttig efter f."
+"eks. at have tilføjet ny hardware- eller driver-softwarekilder."
 
 #. translators: command description
 #: src/commands/inrverify.cc:101
@@ -2574,6 +2574,23 @@ msgstr ""
 "Vis alle pakker, for hvilke nyere versioner er tilgængelige, uanset om de "
 "kan installeres eller ej."
 
+#: src/commands/listupdates.cc:48 src/commands/solveroptionset.cc:24
+#, boost-format
+msgid "Valid values: %1%"
+msgstr "Gyldige værdier: %1%"
+
+#: src/commands/listupdates.cc:50
+msgid "LEVEL"
+msgstr ""
+
+#. translators: --filter-version-change
+#: src/commands/listupdates.cc:53
+msgid ""
+"Filter updates by version change significance. LEVEL: 'none' (default, show "
+"all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
+"changes, i.e. same upstream version)."
+msgstr ""
+
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
 msgid "addlocale (aloc) [OPTIONS] <LOCALE> ..."
@@ -2753,7 +2770,7 @@ msgstr[1] "Fjernede %lu låse."
 #: src/commands/repos/list.cc:236 src/commands/services/list.cc:91
 #: src/commands/services/list.cc:161 src/info.cc:92 src/info.cc:718
 #: src/info.cc:937 src/locales.cc:201 src/search.cc:48 src/search.cc:199
-#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:789
+#: src/search.cc:304 src/search.cc:458 src/search.cc:508 src/update.cc:819
 #: src/utils/misc.cc:324
 msgid "Name"
 msgstr "Navn"
@@ -2773,7 +2790,7 @@ msgstr "Type"
 #. translators: property name; short; used like "Name: value"
 #. translators: package's repository (header)
 #: src/commands/locks/list.cc:136 src/info.cc:90 src/search.cc:56
-#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:786
+#: src/search.cc:306 src/search.cc:457 src/search.cc:504 src/update.cc:816
 #: src/utils/misc.cc:323
 msgid "Repository"
 msgstr "Softwarekilde"
@@ -3583,8 +3600,8 @@ msgstr "Kan ikke bruge %s sammen med %s. Bruger indstillingen %s."
 msgid ""
 "If only one argument is used, it must be a URI pointing to a .repo file."
 msgstr ""
-"Hvis der kun anvendes ét argument, skal det være en URI, der peger på "
-"en .repo-fil."
+"Hvis der kun anvendes ét argument, skal det være en URI, der peger på en ."
+"repo-fil."
 
 #: src/commands/repos/add.cc:130
 msgid "Specified type is not a valid repository type:"
@@ -3633,7 +3650,7 @@ msgstr "Alias"
 #. translator: Option argument like '--export <FILE.repo>'. Do do not translate lowercase wordparts
 #: src/commands/repos/list.cc:51 src/commands/repos/list.cc:54
 #: src/commands/repos/list.cc:292 src/commands/services/add.cc:96
-#: src/commands/services/list.cc:172 src/repos.cc:1242
+#: src/commands/services/list.cc:172 src/repos.cc:1254
 #: src/utils/flags/zyppflags.h:49
 msgid "URI"
 msgstr "URI"
@@ -3642,27 +3659,27 @@ msgstr "URI"
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:58 src/commands/repos/list.cc:244
 #: src/commands/services/add.cc:98 src/commands/services/list.cc:92
-#: src/commands/services/list.cc:162 src/repos.cc:1244
+#: src/commands/services/list.cc:162 src/repos.cc:1256
 msgid "Enabled"
 msgstr "Aktiveret"
 
 #. GPG Check
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:59 src/commands/repos/list.cc:248
-#: src/commands/services/list.cc:163 src/repos.cc:1246
+#: src/commands/services/list.cc:163 src/repos.cc:1258
 msgid "GPG Check"
 msgstr "GPG-tjek"
 
 #. translators: repository priority (in zypper repos -p or -d)
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:60 src/commands/repos/list.cc:276
-#: src/commands/services/list.cc:169 src/repos.cc:1250
+#: src/commands/services/list.cc:169 src/repos.cc:1262
 msgid "Priority"
 msgstr "Prioritet"
 
 #. translators: property name; short; used like "Name: value"
 #: src/commands/repos/list.cc:61 src/commands/services/add.cc:100
-#: src/commands/services/list.cc:93 src/repos.cc:1248
+#: src/commands/services/list.cc:93 src/repos.cc:1260
 msgid "Autorefresh"
 msgstr "Automatisk genopfrisk"
 
@@ -3717,7 +3734,7 @@ msgstr "Vis alle definerede softwarekilder."
 msgid "Export all defined repositories as a single local .repo file."
 msgstr "Eksportér alle angivne softwarekilder som en enkelt .repo-fil."
 
-#: src/commands/repos/list.cc:129 src/repos.cc:999
+#: src/commands/repos/list.cc:129 src/repos.cc:1011
 msgid "Error reading repositories:"
 msgstr "Fejl under læsning af softwarekilder:"
 
@@ -3865,7 +3882,7 @@ msgstr "Det globale tilvalg \"%s\" har ingen virkning her."
 msgid "Arguments are not allowed if '%s' is used."
 msgstr "Argumenter tillades ikke, hvis '%s' anvendes."
 
-#: src/commands/repos/refresh.cc:241 src/repos.cc:1011
+#: src/commands/repos/refresh.cc:241 src/repos.cc:1023
 msgid "Specified repositories: "
 msgstr "Angivne softwarekilder: "
 
@@ -3874,7 +3891,7 @@ msgstr "Angivne softwarekilder: "
 msgid "Refreshing repository '%s'."
 msgstr "Genopfrisker softwarekilden '%s'."
 
-#: src/commands/repos/refresh.cc:282 src/repos.cc:836
+#: src/commands/repos/refresh.cc:282 src/repos.cc:848
 #, c-format, boost-format
 msgid "Scanning content of disabled repository '%s'."
 msgstr "Scanner indhold af deaktiveret softwarekilde \"%s\"."
@@ -3884,7 +3901,7 @@ msgstr "Scanner indhold af deaktiveret softwarekilde \"%s\"."
 msgid "Skipping disabled repository '%s'"
 msgstr "Springer den deaktiverede softwarekilde '%s' over"
 
-#: src/commands/repos/refresh.cc:308 src/repos.cc:854 src/repos.cc:901
+#: src/commands/repos/refresh.cc:308 src/repos.cc:866 src/repos.cc:913
 #, c-format, boost-format
 msgid "Skipping repository '%s' because of the above error."
 msgstr "Springer softwarekilden '%s' over pga. den ovennævnte fejl."
@@ -3914,7 +3931,7 @@ msgstr ""
 msgid "Could not refresh the repositories because of errors."
 msgstr "Kunne ikke genopfriske softwarekilderne pga. fejl."
 
-#: src/commands/repos/refresh.cc:344 src/repos.cc:930
+#: src/commands/repos/refresh.cc:344 src/repos.cc:942
 msgid "Some of the repositories have not been refreshed because of an error."
 msgstr "Nogle af softwarekilderne blev ikke genopfrisket pga. en fejl."
 
@@ -3969,13 +3986,13 @@ msgstr ""
 msgid "Repository '%s' renamed to '%s'."
 msgstr "Softwarekilden '%s' er omdøbt til '%s'."
 
-#: src/commands/repos/rename.cc:47 src/repos.cc:1190
+#: src/commands/repos/rename.cc:47 src/repos.cc:1202
 #, c-format, boost-format
 msgid "Repository named '%s' already exists. Please use another alias."
 msgstr ""
 "En softwarekilde ved navn '%s' eksisterer allerede. Brug et andet alias."
 
-#: src/commands/repos/rename.cc:52 src/repos.cc:1668
+#: src/commands/repos/rename.cc:52 src/repos.cc:1680
 msgid "Error while modifying the repository:"
 msgstr "Fejl under ændring af softwarekilde:"
 
@@ -4435,7 +4452,7 @@ msgstr ""
 "Ligesom --details, med yderligere information, der hvor  søgningen har "
 "matchet (nyttigt ved søgning i afhængigheder)."
 
-#: src/commands/search/search.cc:298 src/repos.cc:773
+#: src/commands/search/search.cc:298 src/repos.cc:785
 #, c-format, boost-format
 msgid "Specified repository '%s' is disabled."
 msgstr "Den angivne softwarekilde \"%s\" er deaktiveret."
@@ -4454,7 +4471,7 @@ msgstr ""
 msgid "See the above message for a hint."
 msgstr "Se meddelelsen ovenfor for at få et tip."
 
-#: src/commands/search/search.cc:505 src/repos.cc:978
+#: src/commands/search/search.cc:505 src/repos.cc:990
 msgid "Running 'zypper refresh' as root might resolve the problem."
 msgstr "At køre 'zypper refresh' som root kan måske løse problemet."
 
@@ -4556,7 +4573,7 @@ msgstr ""
 "Problem med at hente indeksfilen over softwarekilder for tjenesten '%s':"
 
 #: src/commands/services/common.cc:195 src/commands/services/refresh.cc:159
-#: src/repos.cc:1720
+#: src/repos.cc:1730
 #, c-format, boost-format
 msgid "Skipping service '%s' because of the above error."
 msgstr "Springer tjenesten '%s' over pga. den ovennævnte fejl."
@@ -4863,11 +4880,6 @@ msgstr "Afslut den nuværende zypper-skal."
 #: src/commands/shell.cc:74
 msgid "This command only makes sense in the zypper shell."
 msgstr "Denne kommando giver kun mening i zyppers skal."
-
-#: src/commands/solveroptionset.cc:24
-#, boost-format
-msgid "Valid values: %1%"
-msgstr "Gyldige værdier: %1%"
 
 #: src/commands/solveroptionset.cc:36 src/commands/solveroptionset.cc:59
 msgid "Solver options"
@@ -5527,7 +5539,7 @@ msgstr "Version"
 #. translators: property name; short; used like "Name: value"
 #. translators: package architecture (header)
 #: src/info.cc:96 src/search.cc:54 src/search.cc:460 src/search.cc:510
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Arch"
 msgstr "Arkitektur"
 
@@ -5621,7 +5633,7 @@ msgstr ""
 #. translators: property name; short; used like "Name: value"
 #. translator: Table column header.
 #. Name
-#: src/info.cc:501 src/update.cc:406 src/utils/misc.cc:325
+#: src/info.cc:501 src/update.cc:429 src/utils/misc.cc:325
 #: src/utils/misc.cc:367
 msgid "Category"
 msgstr "Kategori"
@@ -5682,7 +5694,7 @@ msgstr "(tom)"
 #. TranslatorExplanation S stands for Status
 #: src/info.cc:717 src/info.cc:936 src/locales.cc:199 src/search.cc:46
 #: src/search.cc:198 src/search.cc:303 src/search.cc:456 src/search.cc:503
-#: src/update.cc:784
+#: src/update.cc:814
 msgid "S"
 msgstr "S"
 
@@ -6014,7 +6026,7 @@ msgstr "Fejl under deaktivering af softwarekilden \"%s\"."
 msgid "Problem retrieving files from '%s'."
 msgstr "Problem med at hente filer fra \"%s\"."
 
-#: src/repos.cc:341 src/repos.cc:1859 src/solve-commit.cc:990
+#: src/repos.cc:341 src/repos.cc:1869 src/solve-commit.cc:990
 #: src/solve-commit.cc:1022 src/solve-commit.cc:1046
 msgid "Please see the above error message for a hint."
 msgstr "Se fejlmeddelelsen ovenfor for at få et tip."
@@ -6074,8 +6086,8 @@ msgid ""
 msgstr ""
 "Dette kan skyldes ugyldig metadata i softwarekilden eller en fejl i metadata-"
 "fortolkeren. I det sidste tilfælde - eller i tvivlstilfælde - opret da "
-"venligst en fejlrapport ved at følge instruktionerne på http://"
-"en.opensuse.org/Zypper/Troubleshooting"
+"venligst en fejlrapport ved at følge instruktionerne på http://en.opensuse."
+"org/Zypper/Troubleshooting"
 
 #: src/repos.cc:446
 #, c-format, boost-format
@@ -6086,33 +6098,33 @@ msgstr "Softwarekilde-metadata for '%s' blev ikke fundet i lokal cache."
 msgid "Error building the cache:"
 msgstr "Fejl under opbygning af cachen:"
 
-#: src/repos.cc:673
+#: src/repos.cc:685
 #, c-format, boost-format
 msgid "Repository '%s' not found by its alias, number, or URI."
 msgstr "Softwarekilden '%s' blev ikke fundet ved dens alias, nummer eller URI."
 
-#: src/repos.cc:675
+#: src/repos.cc:687
 #, c-format, boost-format
 msgid "Use '%s' to get the list of defined repositories."
 msgstr "Brug '%s' for at få en liste over angivne softwarekilder."
 
-#: src/repos.cc:695
+#: src/repos.cc:707
 #, c-format, boost-format
 msgid "Ignoring disabled repository '%s'"
 msgstr "Ignorerer den deaktiverede softwarekilde \"%s\""
 
-#: src/repos.cc:779
+#: src/repos.cc:791
 #, c-format, boost-format
 msgid "Global option '%s' can be used to temporarily enable repositories."
 msgstr ""
 "Globale tilvalg '%s' kan bruges til at aktivere softwarekilder midlertidigt."
 
-#: src/repos.cc:795 src/repos.cc:801
+#: src/repos.cc:807 src/repos.cc:813
 #, c-format, boost-format
 msgid "Ignoring repository '%s' because of '%s' option."
 msgstr "Ignorerer softwarekilden \"%s\" pga. tilvalget \"%s\"."
 
-#: src/repos.cc:822 src/repos.cc:915
+#: src/repos.cc:834 src/repos.cc:927
 #, c-format, boost-format
 msgid "Temporarily enabling repository '%s'."
 msgstr "Aktiverer softwarekilden \"%s\" midlertidigt."
@@ -6120,7 +6132,7 @@ msgstr "Aktiverer softwarekilden \"%s\" midlertidigt."
 #. bsc#1235636: Asks to suppress reporting the Exception (usually: No permission to
 #. write repository cache), because it scares. This was was indeed the legacy behavior:
 #. SUPPRESS: zypper.out().error( ex, "Problem" );
-#: src/repos.cc:879
+#: src/repos.cc:891
 #, c-format, boost-format
 msgid ""
 "Repository '%s' is out-of-date. You can run 'zypper refresh' as root to "
@@ -6129,7 +6141,7 @@ msgstr ""
 "Softwarekilden '%s' er uddateret. Du kan køre 'zypper refresh' som root for "
 "at ajourføre den."
 
-#: src/repos.cc:896
+#: src/repos.cc:908
 #, c-format, boost-format
 msgid ""
 "The metadata cache needs to be built for the '%s' repository. You can run "
@@ -6138,81 +6150,81 @@ msgstr ""
 "Metadata-cachen skal opbygges for softwarekilden '%s'. Du kan køre 'zypper "
 "refresh' som root for at gøre dette."
 
-#: src/repos.cc:922
+#: src/repos.cc:934
 #, c-format, boost-format
 msgid "Repository '%s' stays disabled."
 msgstr "Softwarekilden \"%s\" forbliver deaktiveret."
 
-#: src/repos.cc:969
+#: src/repos.cc:981
 msgid "Initializing Target"
 msgstr "Initialiserer målet"
 
-#: src/repos.cc:977
+#: src/repos.cc:989
 msgid "Target initialization failed:"
 msgstr "Initialisering af målet mislykkedes:"
 
-#: src/repos.cc:1059
+#: src/repos.cc:1071
 #, c-format, boost-format
 msgid "Cleaning metadata cache for '%s'."
 msgstr "Rydder metadata-cache for '%s'."
 
-#: src/repos.cc:1067
+#: src/repos.cc:1079
 #, c-format, boost-format
 msgid "Cleaning raw metadata cache for '%s'."
 msgstr "Rydder 'raw' metadata-cache for '%s'."
 
-#: src/repos.cc:1073
+#: src/repos.cc:1085
 #, c-format, boost-format
 msgid "Keeping raw metadata cache for %s '%s'."
 msgstr "Beholder rå metadata-cache for %s \"%s\"."
 
 #. translators: meaning the cached rpm files
-#: src/repos.cc:1080
+#: src/repos.cc:1092
 #, c-format, boost-format
 msgid "Cleaning packages for '%s'."
 msgstr "Rydder pakker for '%s'."
 
-#: src/repos.cc:1088
+#: src/repos.cc:1100
 #, c-format, boost-format
 msgid "Cannot clean repository '%s' because of an error."
 msgstr "Kan ikke rydde softwarekilden '%s' pga. en fejl."
 
-#: src/repos.cc:1099
+#: src/repos.cc:1111
 msgid "Cleaning installed packages cache."
 msgstr "Rydder cache for installerede pakker."
 
-#: src/repos.cc:1108
+#: src/repos.cc:1120
 msgid "Cannot clean installed packages cache because of an error."
 msgstr "Kan ikke rydde cache for installerede pakker pga. en fejl."
 
-#: src/repos.cc:1126
+#: src/repos.cc:1138
 msgid "Could not clean the repositories because of errors."
 msgstr "Kunne ikke rydde softwarekilderne pga. fejl."
 
-#: src/repos.cc:1132
+#: src/repos.cc:1144
 msgid "Some of the repositories have not been cleaned up because of an error."
 msgstr "Nogle af softwarekilderne blev ikke ryddet pga. en fejl."
 
-#: src/repos.cc:1137
+#: src/repos.cc:1149
 msgid "Specified repositories have been cleaned up."
 msgstr "De angivne softwarekilder blev ryddet."
 
-#: src/repos.cc:1139
+#: src/repos.cc:1151
 msgid "All repositories have been cleaned up."
 msgstr "Alle softwarekilder blev ryddet."
 
-#: src/repos.cc:1161
+#: src/repos.cc:1173
 msgid "This is a changeable read-only media (CD/DVD), disabling autorefresh."
 msgstr ""
 "Dette er et udskifteligt kun-læsbart medie (cd/dvd), deaktiverer automatisk "
 "genopfriskning."
 
-#: src/repos.cc:1182
+#: src/repos.cc:1194
 #, c-format, boost-format
 msgid "Invalid repository alias: '%s'"
 msgstr "Ugyldigt softwarekildealias: '%s'"
 
-#: src/repos.cc:1199
+#: src/repos.cc:1211
 msgid ""
 "Could not determine the type of the repository. Please check if the defined "
 "URIs (see below) point to a valid repository:"
@@ -6220,25 +6232,25 @@ msgstr ""
 "Kunne ikke fastslå typen af softwarekilden. Tjek om de definerede URIer (se "
 "nedenfor) peger på en gyldig softwarekilde:"
 
-#: src/repos.cc:1205
+#: src/repos.cc:1217
 msgid "Can't find a valid repository at given location:"
 msgstr "Kan ikke finde en gyldig softwarekilde på den givne placering:"
 
-#: src/repos.cc:1213
+#: src/repos.cc:1225
 msgid "Problem transferring repository data from specified URI:"
 msgstr "Problem med at overføre softwarekilde-data fra den angivne URI:"
 
-#: src/repos.cc:1214
+#: src/repos.cc:1226
 msgid "Please check whether the specified URI is accessible."
 msgstr "Tjek om den angivne URI er tilgængelig."
 
-#: src/repos.cc:1221
+#: src/repos.cc:1233
 msgid "Unknown problem when adding repository:"
 msgstr "Ukendt problem under tilføjelse af softwarekilde:"
 
 #. translators: BOOST STYLE POSITIONAL DIRECTIVES ( %N% )
 #. translators: %1% - a repository name
-#: src/repos.cc:1231
+#: src/repos.cc:1243
 #, boost-format
 msgid ""
 "GPG checking is disabled in configuration of repository '%1%'. Integrity and "
@@ -6247,136 +6259,136 @@ msgstr ""
 "GPG-tjek er deaktiveret i konfigurationen af softwarekilden '%1%'. "
 "Integritet og oprindelse af pakker kan ikke verificeres."
 
-#: src/repos.cc:1236
+#: src/repos.cc:1248
 #, c-format, boost-format
 msgid "Repository '%s' successfully added"
 msgstr "Softwarekilden '%s' tilføjet"
 
-#: src/repos.cc:1262
+#: src/repos.cc:1274
 #, c-format, boost-format
 msgid "Reading data from '%s' media is delayed until next refresh."
 msgstr ""
 "Læsning af data fra mediet \"%s\" udsættes indtil næste genopfriskning."
 
-#: src/repos.cc:1267
+#: src/repos.cc:1279
 #, c-format, boost-format
 msgid "Reading data from '%s' media"
 msgstr "Læser data fra mediet '%s'"
 
-#: src/repos.cc:1273
+#: src/repos.cc:1285
 #, c-format, boost-format
 msgid "Problem reading data from '%s' media"
 msgstr "Problem med at læse data fra mediet '%s'"
 
-#: src/repos.cc:1274
+#: src/repos.cc:1286
 msgid "Please check if your installation media is valid and readable."
 msgstr "Tjek om dit installationsmedie er gyldigt og læsbart."
 
-#: src/repos.cc:1345
+#: src/repos.cc:1357
 msgid "Problem accessing the file at the specified URI"
 msgstr "Problem med at tilgå filen på den angivne URI"
 
-#: src/repos.cc:1346
+#: src/repos.cc:1358
 msgid "Please check if the URI is valid and accessible."
 msgstr "Tjek om URIen er gyldig og tilgængelig."
 
-#: src/repos.cc:1353
+#: src/repos.cc:1365
 msgid "Problem parsing the file at the specified URI"
 msgstr "Problem med fortolkning af filen på den angivne URI"
 
 #. TranslatorExplanation Don't translate the '.repo' string.
-#: src/repos.cc:1355
+#: src/repos.cc:1367
 msgid "Is it a .repo file?"
 msgstr "Er det en .repo-fil?"
 
-#: src/repos.cc:1362
+#: src/repos.cc:1374
 msgid "Problem encountered while trying to read the file at the specified URI"
 msgstr "Problem opstod under forsøg på at læse filen på den angivne URI"
 
-#: src/repos.cc:1375
+#: src/repos.cc:1387
 msgid "Repository with no alias defined found in the file, skipping."
 msgstr "Softwarekilde uden angivet alias blev fundet i filen. Springer over."
 
-#: src/repos.cc:1381
+#: src/repos.cc:1393
 #, c-format, boost-format
 msgid "Repository '%s' has no URI defined, skipping."
 msgstr "Softwarekilden '%s' har ikke en URI defineret. Springer over."
 
-#: src/repos.cc:1429
+#: src/repos.cc:1441
 #, c-format, boost-format
 msgid "Repository '%s' has been removed."
 msgstr "Softwarekilden '%s' blev fjernet."
 
-#: src/repos.cc:1577
+#: src/repos.cc:1589
 #, c-format, boost-format
 msgid "Repository '%s' priority has been left unchanged (%d)"
 msgstr "Prioritet af softwarekilden '%s' forblev uændret (%d)"
 
-#: src/repos.cc:1610
+#: src/repos.cc:1622
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully enabled."
 msgstr "Softwarekilden \"%s\" er blevet aktiveret."
 
-#: src/repos.cc:1612
+#: src/repos.cc:1624
 #, c-format, boost-format
 msgid "Repository '%s' has been successfully disabled."
 msgstr "Softwarekilden \"%s\" er blevet deaktiveret."
 
-#: src/repos.cc:1619
+#: src/repos.cc:1631
 #, c-format, boost-format
 msgid "Autorefresh has been enabled for repository '%s'."
 msgstr "Automatisk genopfriskning blev aktiveret for softwarekilden '%s'."
 
-#: src/repos.cc:1621
+#: src/repos.cc:1633
 #, c-format, boost-format
 msgid "Autorefresh has been disabled for repository '%s'."
 msgstr "Automatisk genopfriskning blev deaktiveret for softwarekilden '%s'."
 
-#: src/repos.cc:1628
+#: src/repos.cc:1640
 #, c-format, boost-format
 msgid "RPM files caching has been enabled for repository '%s'."
 msgstr "Caching af RPM-filer blev aktiveret for softwarekilden '%s'."
 
-#: src/repos.cc:1630
+#: src/repos.cc:1642
 #, c-format, boost-format
 msgid "RPM files caching has been disabled for repository '%s'."
 msgstr "Caching af RPM-filer blev deaktiveret for softwarekilden '%s'."
 
-#: src/repos.cc:1637
+#: src/repos.cc:1649
 #, c-format, boost-format
 msgid "GPG check has been enabled for repository '%s'."
 msgstr "GPG-tjek er blevet aktiveret for softwarekilden \"%s\"."
 
-#: src/repos.cc:1639
+#: src/repos.cc:1651
 #, c-format, boost-format
 msgid "GPG check has been disabled for repository '%s'."
 msgstr "GPG-tjek er blevet deaktiveret for softwarekilden \"%s\"."
 
-#: src/repos.cc:1645
+#: src/repos.cc:1657
 #, c-format, boost-format
 msgid "Repository '%s' priority has been set to %d."
 msgstr "Prioritet for softwarekilden '%s' blev sat til %d."
 
-#: src/repos.cc:1651
+#: src/repos.cc:1663
 #, c-format, boost-format
 msgid "Name of repository '%s' has been set to '%s'."
 msgstr "Navnet på softwarekilden '%s' blev sat til '%s'."
 
-#: src/repos.cc:1662
+#: src/repos.cc:1674
 #, c-format, boost-format
 msgid "Nothing to change for repository '%s'."
 msgstr "Intet at ændre for softwarekilden '%s'."
 
-#: src/repos.cc:1669
+#: src/repos.cc:1681
 #, c-format, boost-format
 msgid "Leaving repository %s unchanged."
 msgstr "Lader softwarekilden %s forblive uændret."
 
-#: src/repos.cc:1756
+#: src/repos.cc:1766
 msgid "Loading repository data..."
 msgstr "Indlæser softwarekildedata..."
 
-#: src/repos.cc:1758
+#: src/repos.cc:1768
 msgid ""
 "No repositories defined. Operating only with the installed resolvables. "
 "Nothing can be installed."
@@ -6384,43 +6396,43 @@ msgstr ""
 "Ingen softwarekilder angivet. Der anvendes kun installerede resolvables. "
 "Intet kan installeres."
 
-#: src/repos.cc:1781
+#: src/repos.cc:1791
 #, c-format, boost-format
 msgid "Retrieving repository '%s' data..."
 msgstr "Henter data for softwarekilden '%s'..."
 
-#: src/repos.cc:1789
+#: src/repos.cc:1799
 #, c-format, boost-format
 msgid "Repository '%s' not cached. Caching..."
 msgstr "Softwarekilden '%s' er ikke cachet. Cacher..."
 
-#: src/repos.cc:1795 src/repos.cc:1829
+#: src/repos.cc:1805 src/repos.cc:1839
 #, c-format, boost-format
 msgid "Problem loading data from '%s'"
 msgstr "Problem med indlæsning af data fra '%s'"
 
-#: src/repos.cc:1799
+#: src/repos.cc:1809
 #, c-format, boost-format
 msgid "Repository '%s' could not be refreshed. Using old cache."
 msgstr "Softwarekilden \"%s\" kunne ikke genopfriskes. Bruger gammel cache."
 
-#: src/repos.cc:1803 src/repos.cc:1832
+#: src/repos.cc:1813 src/repos.cc:1842
 #, c-format, boost-format
 msgid "Resolvables from '%s' not loaded because of error."
 msgstr "Resolvables fra '%s' er ikke indlæst pga. fejl."
 
-#: src/repos.cc:1819
+#: src/repos.cc:1829
 #, boost-format
 msgid "Repository '%1%' metadata expired since %2%."
 msgstr ""
 
 #. translators: the first %s is 'zypper refresh' and the second 'zypper clean -m'
-#: src/repos.cc:1831
+#: src/repos.cc:1841
 #, c-format, boost-format
 msgid "Try '%s', or even '%s' before doing so."
 msgstr "Prøv '%s', eller måske endda '%s' før du gør det."
 
-#: src/repos.cc:1836
+#: src/repos.cc:1846
 msgid ""
 "Repository metadata expired: Check if 'autorefresh' is turned on (zypper "
 "lr), otherwise manually refresh the repository (zypper ref). If this does "
@@ -6428,30 +6440,30 @@ msgid ""
 "server has actually discontinued to support the repository."
 msgstr ""
 
-#: src/repos.cc:1849
+#: src/repos.cc:1859
 msgid "Reading installed packages..."
 msgstr "Læser installerede pakker..."
 
-#: src/repos.cc:1858
+#: src/repos.cc:1868
 msgid "Problem occurred while reading the installed packages:"
 msgstr "Problem opstod ved læsning af de installerede pakker:"
 
-#: src/repos.cc:1875
+#: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
 msgstr "'%s' ligner en RPM fil. Prøver at bruge den."
 
-#: src/repos.cc:1884
+#: src/repos.cc:1894
 #, c-format, boost-format
 msgid "Problem with the RPM file specified as '%s', skipping."
 msgstr "Problem med RPM-filen angivet som '%s'. Springer over."
 
-#: src/repos.cc:1906
+#: src/repos.cc:1916
 #, c-format, boost-format
 msgid "Problem reading the RPM header of %s. Is it an RPM file?"
 msgstr "Problem med at læse RPM-header for %s. Er det en RPM-fil?"
 
-#: src/repos.cc:1926
+#: src/repos.cc:1936
 msgid "Plain RPM files cache"
 msgstr "Cache for rene RPM-filer"
 
@@ -6623,8 +6635,8 @@ msgstr ""
 #: src/solve-commit.cc:620
 #, c-format, boost-format
 msgid ""
-"Check for running processes using deleted libraries is disabled in "
-"zypper.conf. Run '%s' to check manually."
+"Check for running processes using deleted libraries is disabled in zypper."
+"conf. Run '%s' to check manually."
 msgstr ""
 "Søgning efter kørende processer ved brug af slettede biblioteker er "
 "deaktiveret i zypper.conf. Kør '%s' for at søge manualt."
@@ -6815,7 +6827,7 @@ msgid "Dependencies of all installed packages are satisfied."
 msgstr "Afhængigheder for alle installerede pakker er dækket."
 
 #. translator: stats table header (plural number is %2%)
-#: src/update.cc:336
+#: src/update.cc:359
 #, boost-format
 msgid "Considering %1% out of %2% applicable patches:"
 msgid_plural "Considering %1% out of %2% applicable patches:"
@@ -6823,7 +6835,7 @@ msgstr[0] "Overvejer %1% ud af %2% anvendelige rettelser:"
 msgstr[1] "Overvejer %1% ud af %2% anvendelige rettelser:"
 
 #. translator: stats table header
-#: src/update.cc:340
+#: src/update.cc:363
 #, boost-format
 msgid "Found %1% applicable patch:"
 msgid_plural "Found %1% applicable patches:"
@@ -6831,7 +6843,7 @@ msgstr[0] "Fandt %1% anvendelig rettelse:"
 msgstr[1] "Fandt %1% anvendelige rettelser:"
 
 #. translator: stats summary
-#: src/update.cc:350
+#: src/update.cc:373
 #, c-format, boost-format
 msgid "%d patch locked"
 msgid_plural "%d patches locked"
@@ -6839,7 +6851,7 @@ msgstr[0] "%d rettelse låst"
 msgstr[1] "%d rettelser låst"
 
 #. translator: stats summary
-#: src/update.cc:358
+#: src/update.cc:381
 #, c-format, boost-format
 msgid "%d patch optional"
 msgid_plural "%d patches optional"
@@ -6848,13 +6860,13 @@ msgstr[1] "%d rettelser valgfri"
 
 #. translator: Hint displayed right adjusted; %1% is a CLI option
 #. "42 patches optional                  (use --with-optional to include optional patches)"
-#: src/update.cc:362
+#: src/update.cc:385
 #, boost-format
 msgid "use '%1%' to include optional patches"
 msgstr "brug '%1%' for at inkludere valgfrie rettelser"
 
 #. translator: stats summary
-#: src/update.cc:371
+#: src/update.cc:394
 #, c-format, boost-format
 msgid "%d patch needed"
 msgid_plural "%d patches needed"
@@ -6862,7 +6874,7 @@ msgstr[0] "%d rettelse kræves"
 msgstr[1] "%d rettelser kræves"
 
 #. translator: stats summary
-#: src/update.cc:374
+#: src/update.cc:397
 #, c-format, boost-format
 msgid "%d security patch"
 msgid_plural "%d security patches"
@@ -6870,17 +6882,17 @@ msgstr[0] "%d sikkehedsrettelse"
 msgstr[1] "%d sikkehedsrettelser"
 
 #. translator: Table column header.
-#: src/update.cc:408
+#: src/update.cc:431
 msgid "Updatestack"
 msgstr "Opdateringsstak"
 
 #. translator: Table column header.
-#: src/update.cc:410 src/update.cc:702
+#: src/update.cc:433 src/update.cc:732
 msgid "Patches"
 msgstr "Rettelser"
 
 #. translator: Table column header.
-#: src/update.cc:412
+#: src/update.cc:435
 msgid "Locked"
 msgstr "Låst"
 
@@ -6889,66 +6901,66 @@ msgstr "Låst"
 #. Category    | Updatestack | Patches | Locked | Included categories
 #. ------------+-------------+---------+--------+---------------------
 #. optional   | ...                      ..... | enhancement, feature
-#: src/update.cc:418
+#: src/update.cc:441
 msgid "Included categories"
 msgstr "Inkluderet kategorier"
 
 #. translator: Table headline; 'Needed' refers to patches with status 'needed'
-#: src/update.cc:592
+#: src/update.cc:622
 msgid "Needed software management updates will be installed first:"
 msgstr ""
 "Krævede opdateringer af softwarehåndteringen vil blive installeret først:"
 
-#: src/update.cc:600 src/update.cc:842
+#: src/update.cc:630 src/update.cc:877
 msgid "No updates found."
 msgstr "Ingen opdateringer fundet."
 
 #. translator: Table headline
-#: src/update.cc:607
+#: src/update.cc:637
 msgid "The following updates are also available:"
 msgstr "De følgende opdateringer er også tilgængelige:"
 
-#: src/update.cc:700
+#: src/update.cc:730
 msgid "Package updates"
 msgstr "Pakkeopdateringer"
 
-#: src/update.cc:704
+#: src/update.cc:734
 msgid "Pattern updates"
 msgstr "Mønsteropdateringer"
 
-#: src/update.cc:706
+#: src/update.cc:736
 msgid "Product updates"
 msgstr "Produktopdateringer"
 
-#: src/update.cc:794
+#: src/update.cc:824
 msgid "Current Version"
 msgstr "Nuværende version"
 
-#: src/update.cc:795
+#: src/update.cc:825
 msgid "Available Version"
 msgstr "Tilgængelig version"
 
-#: src/update.cc:972
+#: src/update.cc:1007
 msgid "No matching issues found."
 msgstr "Ingen matchende problemstillinger fundet."
 
-#: src/update.cc:978
+#: src/update.cc:1013
 msgid "The following matches in issue numbers have been found:"
 msgstr "Følgende matchende problemstillingsnumre er blevet fundet:"
 
-#: src/update.cc:988
+#: src/update.cc:1023
 msgid "Matches in patch descriptions of the following patches have been found:"
 msgstr ""
 "Der er blevet fundet matchende rettelsesbeskrivelser i følgende rettelser:"
 
-#: src/update.cc:1050
+#: src/update.cc:1085
 #, c-format, boost-format
 msgid "Fix for bugzilla issue number %s was not found or is not needed."
 msgstr ""
 "Løsning af Bugzilla problemstillingsnummer %s blev ikke fundet eller er ikke "
 "nødvendig."
 
-#: src/update.cc:1052
+#: src/update.cc:1087
 #, c-format, boost-format
 msgid "Fix for CVE issue number %s was not found or is not needed."
 msgstr ""
@@ -6956,7 +6968,7 @@ msgstr ""
 "nødvendig."
 
 #. translators: keep '%s issue' together, it's something like 'CVE issue' or 'Bugzilla issue'
-#: src/update.cc:1055
+#: src/update.cc:1090
 #, c-format, boost-format
 msgid "Fix for %s issue number %s was not found or is not needed."
 msgstr "Rettelse for %s issue nummer %s blev ikke fundet eller behøves ikke."
@@ -10347,8 +10359,8 @@ msgstr "Fejl"
 #~ "søges i\n"
 #~ "                           søges i pakkenavn som standard.\n"
 #~ "-f, --file-list            Søg efter et match i pakkers filliste.\n"
-#~ "-d, --search-descriptions  Søg også i pakkeopsummeringer og "
-#~ "-beskrivelser.\n"
+#~ "-d, --search-descriptions  Søg også i pakkeopsummeringer og -"
+#~ "beskrivelser.\n"
 #~ "-C, --case-sensitive       Udfør versalfølsom søgning.\n"
 #~ "-i, --installed-only       Vis kun pakker, der allerede er installeret.\n"
 #~ "-u, --not-installed-only   Vis kun pakker, der aktuelt ikke er "
