@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 17:49+0200\n"
-"PO-Revision-Date: 2026-03-11 05:04+0000\n"
+"PO-Revision-Date: 2026-05-14 11:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/zypper/master/ja/"
-">\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/zypper/master/"
+"ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: src/Command.cc:93
 msgid "Invalid command"
@@ -2503,7 +2503,7 @@ msgstr "正しい値: %1%"
 
 #: src/commands/listupdates.cc:50
 msgid "LEVEL"
-msgstr ""
+msgstr "レベル"
 
 #. translators: --filter-version-change
 #: src/commands/listupdates.cc:53
@@ -2512,6 +2512,10 @@ msgid ""
 "all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
 "changes, i.e. same upstream version)."
 msgstr ""
+"バージョン変更の種類によって表示可否を指定します。レベル: 'none' (無し、全て"
+"表示), 'rebuild' (再構築のみのバージョン変更を隠す), 'package' "
+"(パッケージングのみの変更 (つまり同じアップストリームバージョンのもの) を隠"
+"す) 。"
 
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
