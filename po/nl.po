@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: zypper.nl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 17:49+0200\n"
-"PO-Revision-Date: 2026-03-06 11:04+0000\n"
+"PO-Revision-Date: 2026-05-14 17:12+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/zypper/master/nl/>\n"
 "Language: nl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.1\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: src/Command.cc:93
 msgid "Invalid command"
@@ -2670,7 +2670,7 @@ msgstr "Geldige waarden: %1%"
 
 #: src/commands/listupdates.cc:50
 msgid "LEVEL"
-msgstr ""
+msgstr "NIVEAU"
 
 #. translators: --filter-version-change
 #: src/commands/listupdates.cc:53
@@ -2679,6 +2679,10 @@ msgid ""
 "all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
 "changes, i.e. same upstream version)."
 msgstr ""
+"Filter wekt bij op basis van de significantie van de versie-wijziging. "
+"NIVEAU: 'geen' (standaard, toon alles), 'herbouwen' (verberg alleen "
+"wijzigingen die herbouwen vereisen), 'verpakken' (verberg alleen wijzigingen "
+"die het verpakken vereisen, d.w.z. dezelfde upstream-versie)."
 
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
