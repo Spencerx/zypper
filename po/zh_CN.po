@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2026-05-15 11:12+0000\n"
-"Last-Translator: Emily Dong <Emily.Dong@excel-gits.com>\n"
+"Last-Translator: Zhao Qiang 赵强 <qzhao@suse.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/zypper/"
 "master/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -1866,7 +1866,7 @@ msgstr "缺少文件"
 
 #: src/callbacks/repo.h:60
 msgid "Retrieving delta"
-msgstr "正在撷取增量升级"
+msgstr "正在获取增量升级"
 
 #. translators: this text is a progress display label e.g. "Applying delta foo [42%]"
 #: src/callbacks/repo.h:85
@@ -1950,7 +1950,7 @@ msgstr ""
 #, boost-format
 msgid "Detected %1% file conflict:"
 msgid_plural "Detected %1% file conflicts:"
-msgstr[0] "侦测到 %1% 个文件冲突："
+msgstr[0] "检测到 %1% 个文件冲突："
 
 #: src/callbacks/rpm.h:531
 msgid "Conflicting files will be replaced."
