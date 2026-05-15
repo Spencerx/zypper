@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 17:49+0200\n"
-"PO-Revision-Date: 2025-08-05 05:59+0000\n"
-"Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
+"PO-Revision-Date: 2026-05-15 11:12+0000\n"
+"Last-Translator: Emily Dong <Emily.Dong@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/zypper/"
 "master/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: src/Command.cc:93
 msgid "Invalid command"
@@ -168,6 +168,8 @@ msgid ""
 "For debugging output specify this option twice. 'zypper -vv ref' for example "
 "will show the mirrors used to download the metadata."
 msgstr ""
+"如需调试输出，请指定两次此选项。例如 \"zypper -vv ref\" 会显示用于下载元数据"
+"的镜像。"
 
 #. translators: --color / --no-color
 #: src/Config.cc:320
@@ -2379,7 +2381,7 @@ msgstr "无效的值：%1%"
 
 #: src/commands/listupdates.cc:50
 msgid "LEVEL"
-msgstr ""
+msgstr "级别"
 
 #. translators: --filter-version-change
 #: src/commands/listupdates.cc:53
@@ -2388,6 +2390,8 @@ msgid ""
 "all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
 "changes, i.e. same upstream version)."
 msgstr ""
+"按版本变更重要性过滤更新。级别：\"none\"（默认，显示全部）、\"rebuild\"（隐藏"
+"仅重构建变更）、\"package\"（隐藏仅打包变更，即上游版本相同）。"
 
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
@@ -3567,7 +3571,7 @@ msgstr ""
 #: src/commands/repos/refresh.cc:60
 msgid ""
 "HINT: 'zypper -vv ref' will show the mirrors used to download the metadata."
-msgstr ""
+msgstr "提示：\"zypper -vv ref\" 会显示用于下载元数据的镜像。"
 
 #. translators: -f, --force
 #: src/commands/repos/refresh.cc:82 src/commands/services/refresh.cc:46
@@ -4297,15 +4301,15 @@ msgstr "已移除服务 '%s'。"
 
 #: src/commands/services/list.cc:94
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/commands/services/list.cc:95
 msgid "Config"
-msgstr ""
+msgstr "配置"
 
 #: src/commands/services/list.cc:137
 msgid "services (ls) [OPTIONS] [SERVICE] ..."
-msgstr ""
+msgstr "services (ls) [选项] [服务] ..."
 
 #: src/commands/services/list.cc:138
 msgid "List all defined services."
@@ -5337,7 +5341,7 @@ msgstr "建议"
 #. translators: A pattern has a 1:1 relation to a .rpm package defining it's properties AKA the pattern's Buddy.
 #: src/info.cc:697
 msgid "Buddy Package"
-msgstr ""
+msgstr "辅助软件包"
 
 #. translators: property name; short; used like "Name: value"
 #: src/info.cc:701
@@ -6097,7 +6101,7 @@ msgstr "读取已安装软件包时发生问题："
 #: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
-msgstr ""
+msgstr "\"%s\" 看起来是个 RPM 文件，将尝试使用。"
 
 #: src/repos.cc:1894
 #, c-format, boost-format
