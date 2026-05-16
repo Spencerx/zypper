@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 17:49+0200\n"
 "PO-Revision-Date: 2026-05-16 14:12+0000\n"
-"Last-Translator: Javier Llorente <javier@opensuse.org>\n"
+"Last-Translator: Antonio Simón <antonio@trans-mission.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/zypper/master/es/>"
 "\n"
 "Language: es\n"
@@ -185,6 +185,9 @@ msgid ""
 "For debugging output specify this option twice. 'zypper -vv ref' for example "
 "will show the mirrors used to download the metadata."
 msgstr ""
+"Para el resultado de depuración, especifique esta opción dos veces. Por "
+"ejemplo, \"zypper -vv ref\" mostrará los servidores de réplica usados para "
+"descargar los metadatos."
 
 #. translators: --color / --no-color
 #: src/Config.cc:320
@@ -2372,7 +2375,7 @@ msgid ""
 msgstr ""
 "Está a punto de realizar una actualización de distribución con todos los "
 "repositorios habilitados. Asegúrese de que estos repositorios sean "
-"compatibles antes de continuar. Consulte '%s' para obtener más información "
+"compatibles antes de continuar. Consulte \"%s\" para obtener más información "
 "sobre este comando."
 
 #. translators: command synopsis; do not translate lowercase words
@@ -2663,7 +2666,7 @@ msgstr "Valores válidos: %1%"
 
 #: src/commands/listupdates.cc:50
 msgid "LEVEL"
-msgstr ""
+msgstr "NIVEL"
 
 #. translators: --filter-version-change
 #: src/commands/listupdates.cc:53
@@ -2672,6 +2675,10 @@ msgid ""
 "all), 'rebuild' (hide rebuild-only changes), 'package' (hide packaging-only "
 "changes, i.e. same upstream version)."
 msgstr ""
+"Filtra las actualizaciones por importancia del cambio de versión. NIVEL: "
+"\"none\" (opción predeterminada, lo muestra todo), \"rebuild\" (oculta los "
+"cambios solo de recompilación), \"package\" (oculta los cambios solo de "
+"paquete, es decir, de la misma versión superior)."
 
 #. translators: command synopsis; do not translate lowercase words
 #: src/commands/locale/addlocalecmd.cc:20
@@ -3947,6 +3954,8 @@ msgstr ""
 msgid ""
 "HINT: 'zypper -vv ref' will show the mirrors used to download the metadata."
 msgstr ""
+"NOTA: \"zypper -vv ref\" solo mostrará los servidores de réplica usados para "
+"descargar los metadatos."
 
 #. translators: -f, --force
 #: src/commands/repos/refresh.cc:82 src/commands/services/refresh.cc:46
@@ -4725,15 +4734,15 @@ msgstr "Se ha eliminado el servicio '%s'."
 
 #: src/commands/services/list.cc:94
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/commands/services/list.cc:95
 msgid "Config"
-msgstr ""
+msgstr "Configuración"
 
 #: src/commands/services/list.cc:137
 msgid "services (ls) [OPTIONS] [SERVICE] ..."
-msgstr ""
+msgstr "services (ls) [OPCIONES] [SERVICIO] ..."
 
 #: src/commands/services/list.cc:138
 msgid "List all defined services."
@@ -5851,7 +5860,7 @@ msgstr "Sugerido"
 #. translators: A pattern has a 1:1 relation to a .rpm package defining it's properties AKA the pattern's Buddy.
 #: src/info.cc:697
 msgid "Buddy Package"
-msgstr ""
+msgstr "Paquete amigo"
 
 #. translators: property name; short; used like "Name: value"
 #: src/info.cc:701
@@ -6653,7 +6662,7 @@ msgstr "Se ha producido un problema al leer los paquetes instalados:"
 #: src/repos.cc:1885
 #, c-format, boost-format
 msgid "'%s' looks like an RPM file. Will try to use it."
-msgstr ""
+msgstr "\"%s\" parece un archivo RPM. Se intentará usar."
 
 #: src/repos.cc:1894
 #, c-format, boost-format
